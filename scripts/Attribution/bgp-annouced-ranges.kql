@@ -1,0 +1,29 @@
+.create table bgpdump(type:string, timestamp:string, wab:string, peerip:string, peerasn:string, prefix:string,aspath:string,originprotocol:string,nexthop:string,localpref:string,med:string,communities:string,atomicaggregator:string,aggregator:string) 
+
+// 65536 /24s in a /8 
+// 16777216 IPs in a /8
+// 16777216 is 1.0.0.0 4026531839 is 239.255.255.255 4294967040 is 255.255.255.255
+// https://www.ripe.net/about-us/press-centre/understanding-ip-addressing
+let slash24sin8 = 65536.0;
+let ipsin8 = 16777216;
+let everySlash24 = range slash24 from parse_ipv4("0.0.0.0") to parse_ipv4("255.255.255.255") step 256;
+let routableSlash24s = bgpdump
+| distinct prefix
+| where prefix !contains ":"
+| extend prefix_parts = split(prefix, "/")
+| project startipint = parse_ipv4(tostring(prefix_parts[0])), cidr = toint(prefix_parts[1])
+| where cidr != 0 // filter out 0.0.0.0/0
+| extend endipint = startipint + IPv4CidrToCount(cidr)
+| extend prefix_range = range(startipint, endipint, 256)
+| mv-expand prefix_range
+| project slash24 = tolong(prefix_range)
+| distinct slash24
+| where IsPublicIPv4AddressInt(slash24);
+everySlash24
+| join kind=leftouter (routableSlash24s) on slash24
+| extend slash8 = slash24 / ipsin8
+| summarize notSeenCount=countif(isempty(slash241)), privateCount=countif(not(IsPublicIPv4AddressInt(slash24))) by slash8
+| project slash8, unannouced=case(notSeenCount==privateCount, notSeenCount/slash24sin8, ((notSeenCount-privateCount)/slash24sin8)), private=(privateCount/slash24sin8) 
+| extend announced = 1.0 - unannouced
+| order by slash8 
+| render columnchart 
