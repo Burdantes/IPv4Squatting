@@ -1,0 +1,36 @@
+inetnum:     200.60.128/18
+status:      allocated
+aut-num:     N/A
+owner:       Telefonica del Peru S.A.A.
+ownerid:     PE-TPSA-LACNIC
+responsible: Telefonica del Peru
+address:     Jorge Basadre, 592, 505
+address:     L27 - Lima - LI
+country:     PE
+phone:       +51 1 2109687 []
+owner-c:     JOR
+tech-c:      JOR
+abuse-c:     JOR
+inetrev:     200.60.128/21
+nserver:     DNS3.UNIRED.NET.PE  
+nsstat:      20191026 AA
+nslastaa:    20191026
+nserver:     DNS4.UNIRED.NET.PE  
+nsstat:      20191026 AA
+nslastaa:    20191026
+created:     20000907
+changed:     20020724
+
+
+inetnum:     2804:7f0:f804::/60
+aut-num:     AS18881
+abuse-c:     CSTBR
+owner:       Cotecna Servicos Ltda
+ownerid:     53.174.983/0001-49
+responsible: Inacio Barbosa
+country:     BR
+owner-c:     RICMA26
+tech-c:      RICMA26
+created:     20150210
+changed:     20150210
+inetnum-up:  2804:7f0::/29

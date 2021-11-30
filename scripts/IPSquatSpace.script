@@ -1,0 +1,553 @@
+REFERENCE @"/shares/Edge.storage/EdgeStorageLocal/Edge_Analysis/distrib/released/AnalyticsUtils.dll";
+REFERENCE @"/shares/Edge.storage/EdgeStorageLocal/Edge_Analysis/distrib/released/Microsoft.Bing.UserLocation.ReverseIpPipeline.Lib.dll";
+REFERENCE @"/shares/searchDM/distrib/released/SLAPI/ScopeUtil.dll";
+
+USING System;
+USING System.Linq;
+USING System.Collections.Generic;
+USING Microsoft.Bing.UserLocation.ReverseIpPipeline.Lib;
+USING MS.Internal.Edge.Analytics.Utils;
+USING MS.Internal.Edge.Analytics.Utils.MapBuilder;
+USING MS.Internal.Bing.DataMining.ScopeUtilities;
+USING MS.Internal.Bing.DataMining.DMLib;
+
+#DECLARE enhancedMetroStream string = @"/shares/Edge.storage/EdgeStorageLocal/Edge_Analysis/OfflinePipelineData/EnhancedMetros.tsv";
+#DECLARE STREAM_EXPIRY string = "1095";  // 3 years in days
+#DECLARE revipPath string = @"/shares/Edge.prod/EdgeProdLocal/Edge_Analysis_Output/MapOfTheInternet/{0:yyyy/MM/yyyy-MM-dd}/AugmentedRevIP/AugmentedRevIP.ss";
+#DECLARE startDateObj DateTime = DateTime.Parse(@@endDate@@);
+#DECLARE previousDate DateTime = @startDateObj.AddDays(-1);
+
+#DECLARE ixPath string = @"/local/temp/ix_prefixes.txt";
+
+ixPrefixesRaw = 
+    EXTRACT ixName:string,
+            prefix:string
+    FROM @ixPath
+    USING DefaultTextExtractor();
+
+ixPrefixes1 = 
+    SELECT ixName,
+           prefix.Split('/') AS prefixParts
+    FROM ixPrefixesRaw
+    WHERE NetworkUtils.IsValidIPv4Prefix(prefix);
+
+ixPrefixes2 =
+    SELECT ixName,
+           NetworkUtils.IPv4ToUint32(prefixParts[0]) AS startIPInt,
+           byte.Parse(prefixParts[1]) AS cidr
+    FROM ixPrefixes1;
+
+ixPrefixes =
+    SELECT ixName,
+           startIPInt,
+           startIPInt + NetworkUtils.CidrToIPv4Count(cidr) - 1 AS endIPInt,
+           Util.AdjustIPv4NetworkBoundary(startIPInt, (byte)24) AS bucket
+    FROM ixPrefixes2;
+
+// RevIP geolocation stream
+//#DECLARE revIPStream string = string.Format(@revipPath, @previousDate);
+//#revIP = SSTREAM @revIPStream; 
+
+tracerouteStream =
+    SSTREAM STREAMSET @"/shares/Edge.prod/EdgeProdLocal/Edge_Analysis_Output/MapOfTheInternet/"
+    PATTERN @"%Y/%m/%Y-%m-%d/EnrichedTraceroutes.ss"
+    RANGE __date = [@@startDate@@, @@endDate@@];
+
+traceroutes =
+    SELECT tracerouteId,
+           sourceIP,
+           hop_IPs.Split(',') AS hopsArray,
+           hop_ASNs.Split(',') AS hopASNArray,
+           hop_ASNs,
+           endUserASN,
+           hop_ASLongNames
+    FROM tracerouteStream
+    WHERE dataSourceName != "Skype" AND
+          NetworkUtils.IsPublicIPv4Address(sourceIP) AND
+          !string.IsNullOrWhiteSpace(hop_ASNs) AND
+          endUserASN != "8075";
+
+tracerouteZipped =
+    SELECT tracerouteId,
+           sourceIP,
+           (endUserASN == null) ? string.Empty : endUserASN.Value.ToString() AS endUserASN,
+           int.Parse(hopData.Item1) AS hopNum,
+           hopData.Item2 AS hopIP,
+           hopData.Item3 AS hopASN,
+           hop_ASNs
+    FROM traceroutes
+    CROSS APPLY Util.ZipThree<string>(Enumerable.Range(0, hopsArray.Length).Select(x => x.ToString()), hopsArray, hopASNArray) AS hopData;
+
+/***********************************************************************************************/
+
+tracerouteWithInts =
+    SELECT tracerouteId,
+           hopIP,
+           hopNum,
+           NetworkUtils.IPv4ToUint32(hopIP) AS hopAsInt,
+           Util.AdjustIPv4NetworkBoundary(NetworkUtils.IPv4ToUint32(hopIP), (byte)24) AS bucket
+    FROM tracerouteZipped
+    WHERE string.IsNullOrWhiteSpace(hopASN);
+
+traceroutesIxJoined =
+    SELECT tracerouteWithInts.tracerouteId,
+           tracerouteWithInts.hopAsInt,
+           tracerouteWithInts.hopNum,
+           ixPrefixes.ixName,
+           ixPrefixes.startIPInt,
+           ixPrefixes.endIPInt
+    FROM tracerouteWithInts
+    LEFT OUTER JOIN ixPrefixes
+    ON tracerouteWithInts.bucket == ixPrefixes.bucket
+    HAVING startIPInt <= hopAsInt AND hopAsInt <= endIPInt;
+
+#DECLARE traceroutesIxJoinedOut string = @"/local/temp/traceroutesIxJoined-" + @@startDate@@ + "-" + @@endDate@@ + ".ss";
+OUTPUT traceroutesIxJoined
+TO SSTREAM @traceroutesIxJoinedOut
+WITH STREAMEXPIRY "180";
+
+ixHops =
+    SELECT tracerouteId,
+           hopNum +":" + ixName AS ixHop
+    FROM traceroutesIxJoined
+    WHERE ixName != null;
+
+ixHopList = 
+    SELECT tracerouteId,
+           ARRAY_AGG(ixHop) AS ixHops
+    FROM ixHops;
+
+tracerouteZippedWithIXes =
+    SELECT tracerouteZipped.*,
+           ixHopList.ixHops
+    FROM tracerouteZipped
+    LEFT OUTER JOIN ixHopList
+    ON tracerouteZipped.tracerouteId == ixHopList.tracerouteId;
+
+tracerouteZipped =
+    SELECT tracerouteId,
+           sourceIP,
+           endUserASN,
+           hopNum,
+           hopIP,
+           hopASN,
+           (ixHops != null) ? Util.AddIxToASPath(ixHops, hop_ASNs) : hop_ASNs AS hop_ASNs
+     FROM tracerouteZippedWithIXes;
+
+/*************************************************************************************************/
+
+tracerouteWithSquatspace =
+    SELECT tracerouteId,
+           sourceIP,
+           endUserASN,
+           hopNum,
+           hopIP,
+           hop_ASNs,
+           Util.FirstMsftHop(hop_ASNs) AS firstMsftHop
+    FROM tracerouteZipped
+    WHERE hopIP.StartsWith("1.") OR hopIP.StartsWith("7.") OR hopIP.StartsWith("11.") OR hopIP.StartsWith("19.") OR
+          hopIP.StartsWith("21.") OR hopIP.StartsWith("22.") OR hopIP.StartsWith("25.") OR hopIP.StartsWith("26.") OR
+          hopIP.StartsWith("28.") OR hopIP.StartsWith("29.") OR hopIP.StartsWith("30.") OR hopIP.StartsWith("33.") OR
+          hopIP.StartsWith("48.") OR hopIP.StartsWith("55.") OR hopIP.StartsWith("214.") OR hopIP.StartsWith("215.");
+
+#DECLARE tracerouteWithSquatspaceOut string = @"/local/temp/squatspace-full-" + @@startDate@@ + "-" + @@endDate@@ + ".ss";
+OUTPUT tracerouteWithSquatspace
+TO SSTREAM @tracerouteWithSquatspaceOut
+WITH STREAMEXPIRY "180";
+
+// remove traceroutes with duplicate
+
+//squatSpaceFilteredBySource =
+//    SELECT ROW_NUMBER() OVER (PARTITION BY sourceIP ORDER BY tracerouteId, hopNum) AS rn,
+
+// Fix ASN path
+
+squatSpacePathFixed1 =
+    SELECT *,
+           hop_ASNs.Split(',') AS asPath
+    FROM tracerouteWithSquatspace;
+
+squatSpacePathFixed2 =
+    SELECT *,
+           Util.FixPath(endUserASN, asPath) AS fixedPath
+    FROM squatSpacePathFixed1;
+
+squatSpacePathFixed3 =
+    SELECT *,
+           fixedPath[hopNum] AS squatASN
+    FROM squatSpacePathFixed2
+    WHERE fixedPath != null;
+
+squatSpaceFiltered =
+    SELECT ROW_NUMBER() OVER (PARTITION BY sourceIP ORDER BY tracerouteId, hopNum) AS rn,
+           *
+    FROM squatSpacePathFixed3
+    WHERE hopNum < firstMsftHop AND !string.IsNullOrWhiteSpace(squatASN)
+    HAVING rn == 1;
+
+tracerouteFinal =
+    SELECT hopIP.Split('.')[0] AS firstOctet,
+           string.Join(",", fixedPath) AS fixedASPath,
+           hopIP,
+           hopNum,
+           squatASN,
+           endUserASN
+    FROM squatSpaceFiltered;
+
+#DECLARE outputTsv string = @"/local/temp/squatspace-" + @@startDate@@ + "-" + @@endDate@@ + ".tsv";
+OUTPUT tracerouteFinal
+TO @outputTsv
+WITH STREAMEXPIRY "180"
+USING DefaultTextOutputter();
+
+#DECLARE outputSS string = @"/local/temp/squatspace-" + @@startDate@@ + "-" + @@endDate@@ + ".ss";
+OUTPUT tracerouteFinal
+TO SSTREAM @outputSS
+WITH STREAMEXPIRY "180";
+
+metricsTable1 =
+    SELECT COUNT() AS tracerouteCount,
+           COUNT(DISTINCT sourceIP) AS sourceIPCount,
+           COUNT(DISTINCT endUserASN) AS sourceASNCount
+    FROM traceroutes;
+
+metricsTable2 =
+    SELECT COUNT(DISTINCT hopASN) AS hopASNCount,
+           COUNT(DISTINCT hopIP) AS hopIPCount
+    FROM tracerouteZipped;
+
+metricsTable3 =
+    SELECT COUNT(DISTINCT tracerouteId) AS squatTracerouteCount
+    FROM tracerouteWithSquatspace;
+
+metricsTable4 =
+    SELECT COUNT(DISTINCT endUserASN) AS sourceASNCount,
+           COUNT(DISTINCT squatASN) AS squatASNCount
+    FROM tracerouteFinal;
+
+metricsTable5 =
+    SELECT COUNT() AS traceroutesWithSquatASN
+    FROM squatSpacePathFixed3
+    WHERE !string.IsNullOrWhiteSpace(squatASN);
+
+/***********************************************************************************/
+
+metrics1 =
+    SELECT "tracerouteCount" AS name,
+           tracerouteCount AS value
+    FROM metricsTable1;
+
+metrics2 =
+    SELECT "sourceIPCount" AS name,
+           sourceIPCount AS value
+    FROM metricsTable1;
+
+metrics3 =
+    SELECT "sourceASNCount" AS name,
+           sourceASNCount AS value
+    FROM metricsTable1;
+
+metrics4 =
+    SELECT "hopASNCount" AS name,
+           hopASNCount AS value
+    FROM metricsTable2;
+
+metrics5 =
+    SELECT "hopIPCount" AS name,
+           hopIPCount AS value
+    FROM metricsTable2;
+
+metrics6 =
+    SELECT "squatTracerouteCount" AS name,
+           squatTracerouteCount AS value
+    FROM metricsTable3;
+
+//metrics7 =
+//    SELECT "squatSourceIPCount" AS name,
+//           sourceIPCount AS value
+//    FROM metricsTable4;
+
+metrics8 =
+    SELECT "squatSourceASNCount" AS name,
+           sourceASNCount AS value
+    FROM metricsTable4;
+
+metrics9 =
+    SELECT "squatASNCount" AS name,
+           squatASNCount AS value
+    FROM metricsTable4;
+
+metrics10 =
+    SELECT "traceroutesWithSquatASN" AS name,
+           traceroutesWithSquatASN AS value
+    FROM metricsTable5;
+
+allMetrics =
+    SELECT * FROM metrics1
+    UNION ALL
+    SELECT * FROM metrics2
+    UNION ALL
+    SELECT * FROM metrics3
+    UNION ALL
+    SELECT * FROM metrics4
+    UNION ALL
+    SELECT * FROM metrics5
+    UNION ALL
+    SELECT * FROM metrics6
+//    UNION ALL
+//    SELECT * FROM metrics7
+    UNION ALL
+    SELECT * FROM metrics8
+    UNION ALL
+    SELECT * FROM metrics9
+    UNION ALL
+    SELECT * FROM metrics10;
+
+#DECLARE outputMetrics string = @"/local/temp/squatspacemetrics-" + @@startDate@@ + "-" + @@endDate@@ + ".ss";
+OUTPUT allMetrics TO SSTREAM @outputMetrics
+SORTED BY name
+CLUSTERED BY name
+WITH STREAMEXPIRY "180";
+
+#CS
+
+public static class Util
+{
+    public static string AddIxToASPath(ScopeArray<string> ixHopList, string hopASNs)
+    {
+        string[] asns = hopASNs.Split(',');
+
+        foreach (string ixHop in ixHopList)
+        {
+            string[] hopSplit = ixHop.Split(':');
+            int hopNum = int.Parse(hopSplit[0]);
+            string ixName = hopSplit[1];
+
+            asns[hopNum] = ixName;
+        }
+
+        return string.Join(",", asns);
+    }
+
+    public static int FirstMsftHop(string aspath)
+    {
+        int msftIndex = aspath.IndexOf(",8075");
+        if (msftIndex == -1)
+        {
+            return -1;
+        }
+
+        string msftSub = aspath.Substring(0, msftIndex);
+        int count =  msftSub.Split(',').Length;
+        return count > 0 ? count : -1;
+    }
+
+    public static string[] FixPath(string sourceASN, string[] asPath)
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(sourceASN) || asPath == null)
+            {
+                return null;
+            }
+
+            string[] noloops = RemoveLoops(sourceASN, asPath);
+            string[] noempty = RemoveEmpty(sourceASN, asPath);
+
+            return noempty;
+        }
+        catch(Exception e)
+        {
+            return null;
+        }
+    }
+
+    public static string[] RemoveLoops(string sourceASN, string[] asPath)
+    {
+        if (string.IsNullOrWhiteSpace(asPath[0]))
+        {
+            asPath[0] = sourceASN;
+        }
+
+        var lastIndexes = new Dictionary<string, int>();
+
+        string previousASN = asPath[0];
+        lastIndexes[previousASN] = 0;
+
+        for (int i = 1; i < asPath.Length; i++)
+        {
+            string asn = asPath[i];
+
+            if (string.IsNullOrWhiteSpace(asn))
+            {
+                continue;
+            }
+
+            lastIndexes[asn] = i;
+        }
+
+        for (int i = 1; i < asPath.Length; i++)
+        {
+            string asn = asPath[i];
+
+            if (string.IsNullOrWhiteSpace(asn))
+            {
+                continue;
+            }
+
+            if (asn != previousASN && i < lastIndexes[previousASN])
+            {
+                asPath[i] = previousASN;
+            }
+            else
+            {
+                previousASN = asn;
+            }
+        }
+
+        return asPath;
+    }
+
+    public static string[] RemoveEmpty(string sourceASN, string[] asPath)
+    {
+        if (string.IsNullOrWhiteSpace(asPath[0]))
+        {
+            asPath[0] = sourceASN;
+        }
+
+        string lastASN = asPath[0];
+        int i = 1;
+
+        while (i < asPath.Length)
+        {
+            if (!string.IsNullOrWhiteSpace(asPath[i]))
+            {
+                lastASN = asPath[i];
+                i++;
+                continue;
+            }
+
+            int j = i + 1;
+            while (j < asPath.Length && string.IsNullOrWhiteSpace(asPath[j]))
+            {
+                j++;
+            }
+
+            if (j == asPath.Length)
+            {
+                break;
+            }
+
+            string nextASN = asPath[j];
+            if (nextASN == lastASN)
+            {
+                for (int k = i; k <= j; k++)
+                {
+                    asPath[k] = lastASN;
+                }
+            }
+
+            i = j + 1;
+        }
+
+        return asPath;
+    }
+
+    /// <summary>
+    /// Generates a new IPv4 address with a network boundary on
+    /// the edge of mask length leading bits of the input IP address.
+    /// </summary>
+    /// <param name="ipAddressString">The IPv4 address to change</param>
+    /// <param name="maskLength">Number of leading bits to use in new network boundary</param>
+    /// <returns>The adjusted IPv4 address</returns>
+    public static uint AdjustIPv4NetworkBoundary(ulong ipAsUint32, byte maskLength)
+    {
+        if (maskLength > 32)
+        {
+            throw new ArgumentException("Parameter cannot be greater than 32", "maskLength");
+        }
+
+        int maskLenCompliment = 32 - maskLength;
+
+        // We want the first maskLength bits so first shift right to get rid of the 32 - maskLength bits
+        // then shift back left by same amount so the MSB is back in the original position
+        ulong shiftedIP = ipAsUint32 >> maskLenCompliment << maskLenCompliment;
+
+        return (uint)shiftedIP;
+    }
+
+    public static uint? Parse(string s)
+    {
+        uint i;
+        if (!uint.TryParse(s, out i))
+        {
+            return null;
+        }
+        return i;
+    }
+
+    public static IEnumerable<Tuple<T, T, T, T, T>> ZipFive<T>(
+                                                IEnumerable<T> first,
+                                                IEnumerable<T> second,
+                                                IEnumerable<T> third,
+                                                IEnumerable<T> fourth,
+                                                IEnumerable<T> fifth)
+    {
+        using (var e1 = first.GetEnumerator())
+        using (var e2 = second.GetEnumerator())
+        using (var e3 = third.GetEnumerator())
+        using (var e4 = fourth.GetEnumerator())
+        using (var e5 = fifth.GetEnumerator())
+        {
+            while (e1.MoveNext() && e2.MoveNext() && e3.MoveNext() && e4.MoveNext() && e5.MoveNext()) 
+            {
+                yield return Tuple.Create(e1.Current, e2.Current, e3.Current, e4.Current, e5.Current);
+            }
+        }
+    }
+
+    public static IEnumerable<Tuple<T, T, T, T>> ZipFour<T>(
+                                                IEnumerable<T> first,
+                                                IEnumerable<T> second,
+                                                IEnumerable<T> third,
+                                                IEnumerable<T> fourth)
+    {
+        using (var e1 = first.GetEnumerator())
+        using (var e2 = second.GetEnumerator())
+        using (var e3 = third.GetEnumerator())
+        using (var e4 = fourth.GetEnumerator())
+        {
+            while (e1.MoveNext() && e2.MoveNext() && e3.MoveNext() && e4.MoveNext()) 
+            {
+                yield return Tuple.Create(e1.Current, e2.Current, e3.Current, e4.Current);
+            }
+        }
+    }
+
+    public static IEnumerable<Tuple<T, T, T>> ZipThree<T>(IEnumerable<T> first, IEnumerable<T> second, IEnumerable<T> third)
+    {
+        using (var e1 = first.GetEnumerator())
+        using (var e2 = second.GetEnumerator())
+        using (var e3 = third.GetEnumerator())
+        {
+            while (e1.MoveNext() && e2.MoveNext() && e3.MoveNext()) 
+            {
+                yield return Tuple.Create(e1.Current, e2.Current, e3.Current);
+            }
+        }
+    }
+
+    public static IEnumerable<Tuple<T, T>> Zip<T>(IEnumerable<T> first, IEnumerable<T> second)
+    {
+        using (var e1 = first.GetEnumerator())
+        using (var e2 = second.GetEnumerator())
+        {
+            while (e1.MoveNext() && e2.MoveNext())
+            {
+                yield return Tuple.Create(e1.Current, e2.Current);
+            }
+        }
+    }
+}
+
+#ENDCS

@@ -1,0 +1,18 @@
+inetnum:        202.12.121.0 - 202.12.121.255
+netname:        CSIRO-ROCK-2
+descr:          CSIRO
+descr:          CSIRO, Tropical Cattle Research Centre
+descr:          PO Box 5545
+descr:          Rockhampton Mail Centre,   Qld
+country:        AU
+org:            ORG-CSAI1-AP
+admin-c:        HB251-AP
+tech-c:         HB251-AP
+notify:         dns.admin@csiro.au
+mnt-by:         APNIC-HM
+mnt-routes:     MAINT-AU-CSIRO
+mnt-lower:      MAINT-AU-CSIRO
+mnt-irt:        IRT-CSIRO-ACCOUNT-AU
+status:         ALLOCATED PORTABLE
+last-modified:  2017-08-30T07:19:13Z
+source:         APNIC

@@ -1,0 +1,24 @@
+inetnum:        194.204.192.0 - 194.204.255.255
+netname:        ONPT
+descr:          Office National des Postes et Telecommunications
+descr:          aka Maroc Telecom
+country:        MA
+admin-c:        SM13-AFRINIC
+tech-c:         SM13-AFRINIC
+org:            ORG-ONdP1-AFRINIC
+status:         ALLOCATED PA
+mnt-by:         AFRINIC-HM-MNT
+mnt-lower:      ONPT-MNT
+notify:         ***@iam.net.ma
+notify:         ***@menara.ma
+changed:        ***@ripe.net 19960111
+changed:        ***@ripe.net 19980203
+changed:        ***@ripe.net 19990422
+changed:        ***@ripe.net 20030106
+changed:        ***@afrinic.net 20050205
+changed:        ***@afrinic.net 20060828
+changed:        ***@afrinic.net 20100118
+changed:        ***@afrinic.net 20100208
+changed:        ***@afrinic.net 20100609
+changed:        ***@afrinic.net 20110602
+source:         AFRINIC

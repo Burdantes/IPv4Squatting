@@ -1,0 +1,45 @@
+inetnum:        0.0.0.0 - 255.255.255.255
+netname:        IANA-BLK
+descr:          The whole IPv4 address space
+country:        EU # Country field is actually all countries in the world and not just EU countries
+org:            ORG-IANA1-RIPE
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ALLOCATED UNSPECIFIED
+remarks:        This object represents all IPv4 addresses.
+remarks:        If you see this object as a result of a single IP query, it
+remarks:        means that the IP address you are querying is currently not
+remarks:        assigned to any organisation.
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-lower:      RIPE-NCC-HM-MNT
+created:        2002-06-25T14:19:09Z
+last-modified:  2018-11-23T10:30:34Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+
+
+inetnum:        25.0.0.0 - 25.255.255.255
+netname:        UK-MOD-19850128
+country:        GB
+org:            ORG-DMoD1-RIPE
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         LEGACY
+notify:         hostmaster@mod.uk
+mnt-by:         UK-MOD-MNT
+mnt-domains:    UK-MOD-MNT
+mnt-routes:     UK-MOD-MNT
+mnt-by:         RIPE-NCC-LEGACY-MNT
+created:        2005-08-23T10:27:23Z
+last-modified:  2016-04-14T09:56:26Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
