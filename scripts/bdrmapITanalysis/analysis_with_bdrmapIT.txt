@@ -1,0 +1,546 @@
+1,*,11.249.124.206,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+2,*,11.90.41.5,14,*,*,*
+3,*,11.129.107.33,7,*,*,*
+4,*,11.134.2.21,13,37963,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+5,*,11.170.174.129,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+6,*,11.105.236.10,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+7,*,30.255.93.9,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+7,*,30.59.129.1,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+7,*,30.59.129.5,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+7,*,30.59.129.1,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+8,*,6.100.131.135,10,*,*,*
+9,*,9.46.32.226,11,*,IBM,IBM
+10,*,11.105.236.42,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+11,*,11.30.230.137,12,45102,Alibaba (US) Technology Co., Ltd.,*
+12,*,11.241.196.34,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+13,*,11.105.236.10,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+14,*,9.172.56.169,17,*,*,*
+15,*,11.109.195.50,9,45102,Alibaba (US) Technology Co., Ltd.,*
+15,*,11.109.132.194,10,45102,Alibaba (US) Technology Co., Ltd.,*
+16,*,11.105.236.42,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+17,*,11.29.202.25,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+18,*,43.228.196.1,9,*,*,*
+19,*,11.30.230.145,11,45102,Alibaba (US) Technology Co., Ltd.,*
+20,*,11.100.156.65,14,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+21,*,11.139.103.246,8,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+22,*,11.48.73.18,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+23,*,9.172.48.161,17,*,*,*
+24,*,11.131.32.13,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+25,*,11.129.107.33,7,*,*,*
+26,*,43.228.226.1,14,*,*,*
+27,*,9.46.40.169,11,17390,IBM,IBM
+28,*,9.46.32.169,10,*,IBM,IBM
+29,*,11.105.236.42,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+30,*,11.139.103.246,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+31,*,11.48.73.18,6,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+32,*,11.228.82.129,11,*,*,*
+33,*,11.105.240.50,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+34,*,11.109.133.6,7,45102,Alibaba (US) Technology Co., Ltd.,*
+35,*,43.228.226.1,15,*,*,*
+36,*,9.46.32.227,10,*,IBM,IBM
+37,*,9.46.40.226,10,17390,IBM,IBM
+38,*,11.90.41.5,9,*,*,*
+39,*,11.203.232.97,19,23724,China Telecom,China Telecom
+40,*,11.249.124.206,6,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+41,*,11.105.236.42,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+42,*,11.105.236.10,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+43,*,11.100.156.65,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+44,*,9.172.48.169,8,*,*,*
+45,*,11.131.32.13,14,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+46,*,9.172.56.161,9,*,*,*
+47,*,11.105.236.10,12,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+48,*,11.105.236.10,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+49,*,11.53.104.2,15,136907,HUAWEI INTERNATIONAL PTE. LTD.,HUAWEI INTERNATIONAL PTE. LTD.
+49,*,11.53.80.7,16,136907,HUAWEI INTERNATIONAL PTE. LTD.,HUAWEI INTERNATIONAL PTE. LTD.
+50,*,11.105.236.42,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+51,*,11.58.248.22,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+52,*,6.100.131.135,11,*,*,*
+53,*,7.114.206.13,11,*,*,*
+53,*,7.114.206.29,13,*,*,*
+54,*,11.31.131.13,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+55,*,43.228.196.1,14,*,*,*
+56,*,30.255.93.9,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+56,*,30.59.129.1,8,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+56,*,30.59.129.5,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+56,*,30.59.129.1,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+57,*,11.105.236.10,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+58,*,6.100.131.135,14,*,*,*
+59,*,30.255.89.9,20,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+59,*,30.59.129.1,21,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+59,*,30.59.129.5,22,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+59,*,30.59.129.1,23,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+60,*,11.131.32.13,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+61,*,11.241.202.125,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+62,*,11.109.195.26,21,45102,Alibaba (US) Technology Co., Ltd.,*
+62,*,11.109.132.178,22,45102,Alibaba (US) Technology Co., Ltd.,*
+63,*,7.170.1.102,10,13896,FUZE INC,FUZE INC
+64,*,11.48.73.18,20,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+65,*,11.129.0.1,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+66,*,11.245.174.169,16,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+67,*,11.30.230.177,11,45102,Alibaba (US) Technology Co., Ltd.,*
+68,*,11.30.230.185,12,45102,Alibaba (US) Technology Co., Ltd.,*
+69,*,11.228.82.129,9,2914,NTT America, Inc.,*
+70,*,43.228.226.1,19,*,*,*
+71,*,43.228.196.1,12,*,*,*
+72,*,11.105.236.42,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+73,*,11.105.236.10,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+74,*,11.31.131.37,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+75,*,11.29.202.25,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+76,*,11.139.103.234,18,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+77,*,7.170.1.102,10,13896,FUZE INC,FUZE INC
+78,*,11.249.124.202,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+79,*,11.105.236.42,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+80,*,11.100.156.65,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+81,*,11.129.107.33,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+82,*,11.131.32.1,3,*,GTT Communications Inc.,*
+83,*,7.114.206.13,7,*,*,*
+83,*,7.114.206.29,9,*,*,*
+84,*,30.10.0.2,8,*,*,*
+85,*,11.60.104.1,3,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+86,*,11.30.230.241,5,45102,Alibaba (US) Technology Co., Ltd.,*
+87,*,9.46.32.226,4,*,IBM,IBM
+88,*,6.100.131.135,5,*,*,*
+89,*,11.105.236.42,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+90,*,11.48.77.18,6,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+91,*,11.26.60.9,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+92,*,30.255.93.9,6,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+92,*,30.59.129.1,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+92,*,30.59.129.5,8,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+92,*,30.59.129.1,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+93,*,9.172.48.169,6,*,*,*
+94,*,9.46.32.169,4,*,IBM,IBM
+95,*,11.53.104.2,8,136907,HUAWEI INTERNATIONAL PTE. LTD.,HUAWEI INTERNATIONAL PTE. LTD.
+95,*,11.53.80.15,9,136907,HUAWEI INTERNATIONAL PTE. LTD.,HUAWEI INTERNATIONAL PTE. LTD.
+96,*,11.241.211.205,4,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+96,*,11.241.210.230,5,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+97,*,11.100.156.65,7,*,*,*
+98,*,11.228.82.129,9,*,*,*
+99,*,11.129.0.49,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+100,*,11.26.152.57,5,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+101,*,9.46.40.169,4,17390,IBM,IBM
+102,*,11.189.152.1,5,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+103,*,11.105.236.10,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+104,*,7.132.1.102,6,13896,FUZE INC,FUZE INC
+105,*,9.46.40.226,4,17390,IBM,IBM
+106,*,9.172.56.161,8,*,*,*
+107,*,11.249.124.214,6,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+108,*,11.60.104.1,3,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+109,*,11.109.195.58,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+109,*,11.109.132.242,8,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+110,*,11.29.202.37,4,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+111,*,11.90.41.9,7,*,*,*
+112,*,7.170.1.102,8,13896,FUZE INC,FUZE INC
+113,*,9.201.96.161,7,*,*,*
+114,*,11.60.104.1,3,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+115,*,26.120.161.36,10,*,*,*
+116,*,11.31.131.37,4,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+117,*,11.30.230.145,6,45102,Alibaba (US) Technology Co., Ltd.,*
+118,*,11.60.104.1,3,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+119,*,43.228.226.1,9,*,*,*
+120,*,11.105.236.42,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+121,*,43.228.196.1,8,*,*,*
+122,*,11.60.100.1,3,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+123,*,11.60.104.1,3,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+124,*,11.139.103.230,6,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+125,*,7.170.1.102,8,13896,FUZE INC,FUZE INC
+126,*,11.60.100.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+127,*,11.60.100.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+128,*,11.29.32.1,5,*,*,*
+129,*,11.249.207.26,3,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+130,*,11.60.104.1,3,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+131,*,11.60.100.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+132,*,7.114.206.13,8,*,*,*
+132,*,7.114.206.29,10,*,*,*
+133,*,43.228.196.1,5,*,*,*
+134,*,11.189.152.1,8,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+135,*,11.54.182.113,5,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+136,*,11.58.248.22,4,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+137,*,9.172.56.161,9,*,*,*
+138,*,11.60.100.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+139,*,9.172.48.161,9,*,*,*
+140,*,11.60.100.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+141,*,11.90.41.9,6,*,*,*
+142,*,11.25.130.150,12,*,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+143,*,30.255.93.9,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+143,*,30.59.129.1,8,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+143,*,30.59.129.5,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+143,*,30.59.129.1,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+144,*,11.54.182.105,5,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+145,*,11.31.131.13,3,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+146,*,11.60.104.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+147,*,11.105.236.42,4,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+148,*,11.170.174.145,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+149,*,11.109.195.50,8,45102,Alibaba (US) Technology Co., Ltd.,*
+149,*,11.109.132.238,9,45102,Alibaba (US) Technology Co., Ltd.,*
+150,*,9.201.96.169,4,*,*,*
+151,*,30.10.0.2,9,*,*,*
+152,*,11.245.178.6,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+153,*,11.228.82.129,11,3257,GTT Communications Inc.,*
+154,*,11.249.207.26,4,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+155,*,11.29.202.37,6,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+156,*,11.60.104.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+157,*,11.129.0.33,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+158,*,11.53.80.15,8,136907,HUAWEI INTERNATIONAL PTE. LTD.,HUAWEI INTERNATIONAL PTE. LTD.
+159,*,11.48.77.18,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+160,*,9.46.40.226,4,17390,IBM,IBM
+161,*,11.60.104.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+162,*,11.249.124.206,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+163,*,11.60.104.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+164,*,11.30.230.241,5,45102,Alibaba (US) Technology Co., Ltd.,*
+165,*,11.60.104.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+166,*,11.26.152.49,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+167,*,11.139.103.246,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+168,*,6.100.131.135,6,*,*,*
+169,*,7.170.1.102,8,13896,FUZE INC,FUZE INC
+170,*,7.170.1.102,8,13896,FUZE INC,FUZE INC
+171,*,9.46.32.226,4,*,IBM,IBM
+172,*,7.132.1.102,7,13896,FUZE INC,FUZE INC
+173,*,11.60.100.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+174,*,11.26.60.9,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+175,*,11.60.100.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+176,*,9.46.40.169,4,17390,IBM,IBM
+177,*,11.131.32.1,4,*,GTT Communications Inc.,*
+178,*,11.105.236.10,4,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+179,*,11.105.236.10,4,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+180,*,11.105.236.42,4,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+181,*,11.60.104.1,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+182,*,11.29.32.1,7,*,*,*
+183,*,26.120.161.36,10,*,*,*
+184,*,43.228.226.1,10,*,*,*
+185,*,11.100.156.65,5,*,*,*
+186,*,11.30.230.145,5,45102,Alibaba (US) Technology Co., Ltd.,*
+187,*,11.48.73.18,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+188,*,11.100.156.65,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+189,*,11.200.135.145,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+190,*,11.200.134.57,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+191,*,11.200.135.141,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+192,*,9.172.56.169,9,*,*,*
+193,*,11.30.230.161,9,45102,Alibaba (US) Technology Co., Ltd.,*
+194,*,11.200.134.65,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+195,*,11.129.0.1,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+196,*,11.200.135.61,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+197,*,11.58.248.22,11,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+198,*,9.201.96.169,13,*,*,*
+199,*,11.139.103.254,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+200,*,11.105.236.10,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+201,*,11.200.134.145,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+202,*,6.100.131.135,11,*,*,*
+203,*,11.105.236.42,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+204,*,11.105.236.10,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+205,*,30.255.93.9,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+205,*,30.59.129.1,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+205,*,30.59.129.5,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+205,*,30.59.129.1,14,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+206,*,11.30.230.145,9,45102,Alibaba (US) Technology Co., Ltd.,*
+207,*,43.228.196.1,7,*,*,*
+208,*,11.29.202.13,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+209,*,11.200.135.141,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+210,*,9.46.32.226,11,*,IBM,IBM
+211,*,11.90.41.5,12,*,*,*
+212,*,11.249.124.210,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+213,*,11.200.135.137,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+214,*,11.200.134.133,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+215,*,43.228.226.1,14,*,*,*
+216,*,11.200.135.133,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+217,*,11.109.132.210,12,45102,Alibaba (US) Technology Co., Ltd.,*
+218,*,11.105.236.42,7,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+219,*,11.106.76.1,15,*,*,*
+220,*,11.30.230.201,7,45102,Alibaba (US) Technology Co., Ltd.,*
+221,*,11.228.82.129,9,*,*,*
+222,*,11.106.60.5,12,*,*,*
+223,*,11.105.236.42,6,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+224,*,6.100.131.135,5,*,*,*
+225,*,11.105.236.10,7,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+226,*,11.29.32.1,10,*,*,*
+227,*,9.172.48.169,6,*,*,*
+228,*,11.106.76.1,12,*,*,*
+229,*,9.201.96.161,9,*,*,*
+230,*,11.189.156.5,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+231,*,7.170.1.102,14,13896,FUZE INC,FUZE INC
+232,*,11.106.76.1,11,*,*,*
+233,*,11.105.236.42,7,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+234,*,11.106.76.1,12,*,*,*
+235,*,11.31.131.37,16,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+236,*,11.105.125.26,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+237,*,11.131.32.13,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+238,*,11.105.236.10,6,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+239,*,11.53.80.7,12,136907,HUAWEI INTERNATIONAL PTE. LTD.,HUAWEI INTERNATIONAL PTE. LTD.
+240,*,7.170.1.102,17,13896,FUZE INC,FUZE INC
+241,*,9.46.32.226,7,*,IBM,IBM
+242,*,11.245.174.181,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+243,*,11.106.76.1,12,*,*,*
+244,*,11.106.76.1,10,*,*,*
+245,*,11.106.76.1,12,*,*,*
+246,*,11.105.236.10,6,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+247,*,11.106.60.5,13,*,*,*
+248,*,43.228.226.1,8,*,*,*
+249,*,11.106.60.5,12,*,*,*
+250,*,11.105.236.10,7,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+251,*,11.129.0.33,2,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+252,*,11.58.248.22,6,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+253,*,11.26.148.53,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+254,*,11.105.240.50,6,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+255,*,43.228.196.1,8,*,*,*
+256,*,11.30.230.193,7,45102,Alibaba (US) Technology Co., Ltd.,*
+257,*,11.228.83.145,18,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+258,*,11.129.0.49,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+259,*,11.100.156.65,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+260,*,11.30.230.201,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+261,*,11.200.134.65,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+262,*,11.203.232.105,14,23724,China Telecom,China Telecom
+263,*,11.30.149.14,14,*,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+264,*,6.100.131.135,15,*,*,*
+265,*,11.31.131.1,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+266,*,11.58.248.22,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+267,*,11.200.135.137,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+268,*,11.90.41.17,16,*,*,*
+269,*,43.228.226.1,17,*,*,*
+270,*,11.105.236.10,15,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+271,*,11.200.135.61,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+272,*,11.29.32.1,17,*,*,*
+273,*,11.131.32.13,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+274,*,9.46.32.226,13,*,IBM,IBM
+275,*,11.228.93.57,18,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+276,*,11.200.134.145,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+277,*,11.200.134.145,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+278,*,11.189.156.5,20,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+279,*,11.30.230.209,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+280,*,11.200.135.137,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+281,*,9.172.56.169,20,*,*,*
+282,*,11.105.236.42,15,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+283,*,9.201.96.161,9,*,*,*
+284,*,11.200.134.137,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+285,*,7.114.206.13,13,*,*,*
+285,*,7.114.206.29,15,*,*,*
+286,*,11.200.134.133,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+287,*,11.200.134.61,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+288,*,11.105.236.42,15,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+289,*,43.228.196.1,15,*,*,*
+290,*,9.172.48.169,18,*,*,*
+291,*,11.228.82.129,16,3257,GTT Communications Inc.,*
+292,*,11.200.134.145,15,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+293,*,11.31.131.13,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+294,*,11.31.131.37,4,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+295,*,43.228.226.1,12,*,*,*
+296,*,11.106.76.1,10,*,*,*
+297,*,11.106.60.5,8,*,*,*
+298,*,11.102.240.130,5,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+299,*,11.106.76.1,8,*,*,*
+300,*,9.172.56.169,11,*,*,*
+301,*,11.100.156.65,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+302,*,9.46.40.169,9,17390,IBM,IBM
+303,*,11.228.85.165,5,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+304,*,11.106.76.1,10,*,*,*
+305,*,11.105.236.42,6,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+306,*,11.53.104.2,12,136907,HUAWEI INTERNATIONAL PTE. LTD.,HUAWEI INTERNATIONAL PTE. LTD.
+306,*,11.53.80.15,13,136907,HUAWEI INTERNATIONAL PTE. LTD.,HUAWEI INTERNATIONAL PTE. LTD.
+307,*,11.228.82.129,6,2914,NTT America, Inc.,*
+308,*,11.131.32.13,16,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+309,*,11.24.10.158,10,4761,PT. INDOSAT Tbk,PT. INDOSAT Tbk
+310,*,7.170.1.102,6,13896,FUZE INC,FUZE INC
+311,*,11.106.60.5,8,*,*,*
+312,*,6.100.131.135,11,*,*,*
+313,*,11.90.41.5,9,*,*,*
+314,*,11.106.76.1,8,*,*,*
+315,*,9.172.48.169,10,*,*,*
+316,*,11.105.236.10,6,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+317,*,11.105.236.10,6,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+318,*,11.106.76.1,8,*,*,*
+319,*,43.228.196.1,8,*,*,*
+320,*,11.189.152.29,5,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+321,*,9.46.32.227,9,*,IBM,IBM
+322,*,11.106.76.1,8,*,*,*
+323,*,11.106.60.5,10,*,*,*
+324,*,11.245.174.173,5,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+325,*,11.88.66.13,4,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+326,*,7.114.206.13,10,*,*,*
+326,*,7.114.206.29,12,*,*,*
+327,*,11.58.248.22,6,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+328,*,11.29.32.1,4,*,*,*
+329,*,11.249.188.113,12,23724,China Telecom,China Telecom
+330,*,7.170.1.102,6,13896,FUZE INC,FUZE INC
+331,*,9.46.40.226,9,17390,IBM,IBM
+332,*,11.106.60.5,10,*,*,*
+333,*,9.201.96.161,8,*,*,*
+334,*,11.58.248.22,11,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+335,*,11.30.230.161,10,45102,Alibaba (US) Technology Co., Ltd.,*
+336,*,43.228.196.1,9,*,*,*
+337,*,11.105.236.10,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+338,*,30.255.93.9,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+338,*,30.59.129.1,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+338,*,30.59.129.5,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+338,*,30.59.129.1,14,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+339,*,11.249.124.210,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+340,*,11.139.103.254,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+341,*,9.46.32.226,11,*,IBM,IBM
+342,*,11.200.134.65,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+343,*,11.48.73.18,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+344,*,11.200.134.57,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+345,*,9.172.56.169,9,*,*,*
+346,*,11.29.202.13,8,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+347,*,11.200.135.133,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+348,*,11.200.135.137,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+349,*,11.200.135.61,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+350,*,11.105.236.10,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+351,*,11.105.236.42,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+352,*,11.100.156.65,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+353,*,6.100.131.135,11,*,*,*
+354,*,11.200.134.145,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+355,*,11.90.41.5,12,*,*,*
+356,*,11.200.135.141,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+357,*,11.109.132.210,12,45102,Alibaba (US) Technology Co., Ltd.,*
+358,*,11.200.135.145,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+359,*,11.129.0.1,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+360,*,11.200.135.141,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+361,*,11.200.134.133,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+362,*,11.30.230.145,9,45102,Alibaba (US) Technology Co., Ltd.,*
+363,*,11.26.68.13,6,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+364,*,11.26.60.9,6,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+365,*,11.90.41.5,13,*,*,*
+366,*,43.228.196.1,6,*,*,*
+367,*,43.228.226.1,16,*,*,*
+368,*,11.249.124.202,8,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+369,*,11.48.73.18,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+370,*,11.100.156.65,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+371,*,9.46.32.226,8,*,IBM,IBM
+372,*,11.58.248.22,7,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+373,*,6.100.131.135,9,*,*,*
+374,*,11.105.236.42,11,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+375,*,11.109.195.26,8,45102,Alibaba (US) Technology Co., Ltd.,*
+375,*,11.109.132.178,9,45102,Alibaba (US) Technology Co., Ltd.,*
+376,*,9.201.96.161,7,*,*,*
+377,*,11.105.236.10,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+378,*,11.139.103.234,8,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+379,*,11.105.236.42,10,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+380,*,30.255.89.9,8,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+380,*,30.59.129.1,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+380,*,30.59.129.5,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+380,*,30.59.129.1,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+381,*,11.39.229.57,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+382,*,43.228.226.1,18,*,*,*
+383,*,43.228.196.1,11,*,*,*
+384,*,43.228.196.1,9,*,*,*
+385,*,11.48.73.18,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+386,*,11.189.156.17,16,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+387,*,11.139.103.234,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+388,*,11.241.196.6,14,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+389,*,30.255.89.9,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+389,*,30.59.129.1,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+389,*,30.59.129.5,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+389,*,30.59.129.1,14,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+390,*,11.228.82.129,11,*,*,*
+391,*,11.129.107.33,7,*,*,*
+392,*,11.109.195.58,12,45102,Alibaba (US) Technology Co., Ltd.,*
+392,*,11.109.132.242,13,45102,Alibaba (US) Technology Co., Ltd.,*
+393,*,11.0.6.157,8,*,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+394,*,11.29.32.1,14,*,*,*
+395,*,6.100.131.135,9,*,*,*
+396,*,9.201.96.161,11,*,*,*
+397,*,11.249.124.202,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+398,*,11.139.38.81,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+399,*,11.31.131.1,14,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+400,*,11.189.156.17,17,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+401,*,43.228.226.1,15,*,*,*
+402,*,11.241.202.125,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+403,*,11.90.41.17,13,*,*,*
+404,*,7.114.206.13,8,*,*,*
+404,*,7.114.206.29,10,*,*,*
+405,*,11.48.77.18,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+406,*,9.46.40.226,8,17390,IBM,IBM
+407,*,7.80.9.142,9,14969,JANE STREET,JANE STREET
+408,*,11.60.100.1,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+409,*,11.105.236.10,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+410,*,7.132.1.102,13,13896,FUZE INC,FUZE INC
+411,*,43.228.196.1,11,*,*,*
+412,*,11.228.91.165,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+413,*,11.131.32.1,7,*,GTT Communications Inc.,*
+414,*,43.228.226.1,15,*,*,*
+415,*,11.105.236.42,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+416,*,11.105.236.10,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+417,*,9.46.40.161,8,17390,IBM,IBM
+418,*,11.30.230.129,9,45102,Alibaba (US) Technology Co., Ltd.,*
+419,*,11.60.100.1,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+420,*,11.129.0.33,14,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+421,*,9.46.32.226,8,*,IBM,IBM
+422,*,11.31.131.1,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+423,*,11.249.124.206,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+424,*,9.172.48.169,11,*,*,*
+425,*,11.60.100.1,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+426,*,11.58.51.57,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+427,*,11.25.130.62,15,*,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+428,*,11.29.32.1,9,*,*,*
+429,*,11.29.202.25,8,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+430,*,11.228.82.129,11,*,*,*
+431,*,11.245.174.189,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+432,*,11.30.230.129,9,45102,Alibaba (US) Technology Co., Ltd.,*
+433,*,11.60.100.1,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+434,*,11.90.41.5,16,*,*,*
+435,*,7.170.1.102,14,13896,FUZE INC,FUZE INC
+436,*,11.26.60.9,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+437,*,11.100.156.65,11,*,*,*
+438,*,11.60.104.1,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+439,*,11.129.244.65,17,37963,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+440,*,11.60.100.1,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+441,*,11.26.152.29,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+442,*,11.109.133.34,11,45102,Alibaba (US) Technology Co., Ltd.,*
+443,*,7.170.1.102,14,13896,FUZE INC,FUZE INC
+444,*,11.139.103.226,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+445,*,11.60.100.1,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+446,*,11.105.236.42,9,134963,Alibaba.com Singapore E-Commerce Private Limited,Alibaba.com Singapore E-Commerce Private Limited
+447,*,7.114.206.13,9,*,*,*
+447,*,7.114.206.29,11,*,*,*
+448,*,11.60.104.1,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+449,*,9.201.96.161,11,*,*,*
+450,*,9.172.56.169,12,*,*,*
+451,*,11.189.152.5,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+452,*,11.60.104.1,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+453,*,6.100.131.135,9,*,*,*
+454,*,11.60.100.1,7,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+455,*,30.255.93.9,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+455,*,30.59.129.1,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+455,*,30.59.129.5,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+455,*,30.59.129.1,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+456,*,11.228.83.145,16,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+457,*,11.53.104.2,10,136907,HUAWEI INTERNATIONAL PTE. LTD.,HUAWEI INTERNATIONAL PTE. LTD.
+457,*,11.53.80.15,11,136907,HUAWEI INTERNATIONAL PTE. LTD.,HUAWEI INTERNATIONAL PTE. LTD.
+458,*,11.139.38.81,8,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+459,*,7.132.2.100,8,13896,FUZE INC,FUZE INC
+460,*,11.29.202.13,9,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+461,*,11.106.76.1,8,*,*,*
+462,*,11.106.76.1,10,*,*,*
+463,*,11.129.0.49,5,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+464,*,43.228.226.1,16,*,*,*
+465,*,11.106.76.1,10,*,*,*
+466,*,11.106.76.1,8,*,*,*
+467,*,11.131.32.1,10,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+468,*,11.48.73.18,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+469,*,43.228.196.1,16,*,*,*
+470,*,11.30.230.177,9,45102,Alibaba (US) Technology Co., Ltd.,*
+471,*,11.228.83.129,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+472,*,11.53.104.2,4,136907,HUAWEI INTERNATIONAL PTE. LTD.,HUAWEI INTERNATIONAL PTE. LTD.
+472,*,11.53.80.7,5,136907,HUAWEI INTERNATIONAL PTE. LTD.,HUAWEI INTERNATIONAL PTE. LTD.
+473,*,11.249.124.214,6,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+474,*,11.106.76.1,11,*,*,*
+475,*,11.106.76.1,9,*,*,*
+476,*,11.106.76.1,8,*,*,*
+477,*,11.245.178.2,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+478,*,11.30.230.185,10,45102,Alibaba (US) Technology Co., Ltd.,*
+479,*,11.228.82.129,12,*,*,*
+480,*,9.172.48.161,11,*,*,*
+481,*,11.189.156.5,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+482,*,11.139.103.230,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+483,*,11.102.240.210,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+484,*,11.106.76.1,9,*,*,*
+485,*,11.109.195.18,11,45102,Alibaba (US) Technology Co., Ltd.,*
+485,*,11.109.132.194,12,45102,Alibaba (US) Technology Co., Ltd.,*
+486,*,30.255.89.9,11,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+486,*,30.59.129.1,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+486,*,30.59.129.5,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+486,*,30.59.129.1,14,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+487,*,11.29.32.1,11,*,*,*
+488,*,11.210.28.85,17,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+489,*,11.24.10.158,9,4761,PT. INDOSAT Tbk,PT. INDOSAT Tbk
+490,*,11.245.174.177,13,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+491,*,11.228.93.73,12,45102,Alibaba (US) Technology Co., Ltd.,Alibaba (US) Technology Co., Ltd.
+492,*,11.106.60.5,8,*,*,*
+493,*,11.106.76.1,10,*,*,*

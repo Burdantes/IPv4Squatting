@@ -1,0 +1,4 @@
+sourceIPCount	15604247
+sourceASNCount	47285
+tracerouteCount	1170516268
+squatTracerouteCount	19539172

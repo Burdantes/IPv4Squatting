@@ -1,0 +1,15 @@
+.create table whois (rir:string, prefix:string, netname:string, orgid:string, orgname:string, notify:string, mntby:string, descr:string) 
+
+.create table as2org (asn:string, changed:string, as_name:string, org_id:string, opaque_id:string, source:string)
+
+.set-or-replace async whoisjoined2 <|
+let revip = database('afdmoi').MOI_AugmentedRevIPv4
+| project StartIP, EndIP, Bucket, asn;
+whois
+| extend ip = tostring(split(prefix, "/")[0])
+| extend Bucket = parse_ipv4_mask(ip, 24), ipAsInt = parse_ipv4(ip)
+| join kind=leftouter (revip) on Bucket
+| where StartIP <= ipAsInt and ipAsInt <= EndIP
+| project-away Bucket1, Bucket, StartIP, EndIP, ipAsInt, ip
+| join kind=leftouter (as2org | project-away opaque_id | extend asn = tolong(asn), source = tolower(source)) on asn
+| project-away asn1

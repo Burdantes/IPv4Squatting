@@ -31,29 +31,30 @@ Install these dependencies if configure script complains
 sudo apt install libbz2-dev zlib1g-dev
 ```
 
-3. scamper. Follow the instructions on https://www.caida.org/catalog/software/scamper/
-
-4. py-radix package
+3. py-radix package
 ```
 $ pip install py-radix
 ```
-5. aggregate-prefixes
+4. aggregate-prefixes
 ```
 $ pip install aggregate-prefixes
 ```
-6. Copy the traceroute_table.py script to ```~/.config/ripe-atlas-tools/renderers``` so that RIPE Atlas tools can use it to format traceroute results in a delimited format for easier processing.
+5. Copy the traceroute_table.py script to ```~/.config/ripe-atlas-tools/renderers``` so that RIPE Atlas tools can use it to format traceroute results in a delimited format for easier processing.
 
 ## Step 1 : Data Collection and Processing
 
-### Find unannounced IPv4 space
-To get unannounced prefixes for each month between `$start_month` and `$end_month` in `$year`, run the following
-```
-./scripts/collect_bgp_dumps_multiple.sh $start_month $end_month $year
-```
-The list of unannounced prefixes for `$month` is stored in `./data/unannounced-$year$month.txt`
+### Find Unannounced IPv4 Space
 
+Begin BGP data collection with the `collection_bgp_dumps.sh` script which downloads 1 weekday snapshot per RIPE RIS collector per week into the directory which it is run. Each generated file contains a prefix-asn mapping.
 
-For example, `./scripts/collect_bgp_dumps_multiple.sh 9 10 2021` will generate two files `unannounced-202109.txt` and `unannounced-202110.txt` in `./data/`
+Run the following command to output all distrinct prefixes that have ASN mappings
+```
+gunzip -kc *.gz | LC_ALL=C sort -k1V,1V -k2n,2n | uniq > prefix-asn-YYYYMM.txt
+```
+and then
+```
+./unannounced.py prefix-asn-YYYYMM.txt > unannounced-YYYYMM.txt
+```
 
 ### Traceroutes (fetching from RIPE's server)
 
