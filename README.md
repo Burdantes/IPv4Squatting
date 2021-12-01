@@ -44,7 +44,7 @@ $ pip install aggregate-prefixes
 ## Step 1 : Data Collection and Processing
 
 ### Find unannounced IPv4 space
-To get unannounced prefixes for each month between `$start_month` and `$end_month` in '$year', run the following
+To get unannounced prefixes for each month between `$start_month` and `$end_month` in `$year`, run the following
 ```
 ./scripts/collect_bgp_dumps_2021.sh $start_month $end_month $year
 ```
