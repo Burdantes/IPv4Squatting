@@ -31,15 +31,17 @@ Install these dependencies if configure script complains
 sudo apt install libbz2-dev zlib1g-dev
 ```
 
-3. py-radix package
+3. scamper. Follow the instructions on https://www.caida.org/catalog/software/scamper/
+
+4. py-radix package
 ```
 $ pip install py-radix
 ```
-4. aggregate-prefixes
+5. aggregate-prefixes
 ```
 $ pip install aggregate-prefixes
 ```
-5. Copy the traceroute_table.py script to ```~/.config/ripe-atlas-tools/renderers``` so that RIPE Atlas tools can use it to format traceroute results in a delimited format for easier processing.
+6. Copy the traceroute_table.py script to ```~/.config/ripe-atlas-tools/renderers``` so that RIPE Atlas tools can use it to format traceroute results in a delimited format for easier processing.
 
 ## Step 1 : Data Collection and Processing
 
