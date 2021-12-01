@@ -1,5 +1,6 @@
 # Requirements
 ## Python
+- py-radix
 - 
 ## Others
 - [bgpdump](https://github.com/RIPE-NCC/bgpdump)
