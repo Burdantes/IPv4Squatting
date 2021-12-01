@@ -79,3 +79,11 @@ Each line of `$squatspace_result` that is not commented (does not start with `#`
 trace_id|src_asn|squat_ip|squat_index|squat_asn|squat_org|squat_rir|src_ip|squat_index_updated
 ```
 where `trace_id` is the traceroute ID (index), `src_asn` is the source ASN, `squat_ip` is the first squat address in the traceroute, `squat_index` is the index of the first squat address in the traceroute, `squat_asn` is the ASN of the attributed squatter, `squat_org` and `squat_rir` are organization name of the attributed squatter (based on different data source), `src_ip` is the source IP, and `squat_index_updated`is how many public address hops exist before the first squat address hop
+
+# Router and middlebox
+To identify router and middlebox squat address configuration, use `./scripts/router_config.py`. The input to the script is the file `$squatspace_path` containing the mapping between hops and ASes (the output of `./scripts/tr_pathfix.py`). The script usage is
+```
+python3 ./scripts/router_config.py $squatspace_path
+```
+
+The output of the scripts consists of traceroutes that are identified with squat addresses deployed on routers, and at the end of each line a classification is given (`internal_router`, `border_router` or `unmapped_router`)
