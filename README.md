@@ -300,24 +300,86 @@ The algorithm takes as input the raw traceroutes in file `$squatspace_full` and 
 
 First, create a `graph` folder in the UsageDetection folder via `mkdir graph` then apply the script 
 ```
-$ python3 cgnat_rtt.py --path_to_traceroutes $squatspace_full 
+$ python3 nat444.py --path_to_traceroutes $squatspace_full 
 ```
 
 The result is pushed in `result` and is called the `cgnat_statistics.csv`. 
 
 ##### Cluster the statistics to detect CGNAT and NAT
 
+In order to cluster the statistics, we leverage the script kmeanNAT444 which takes as input the `cgnat_statistics.csv`, compute the gap statistics (this process takes a long time) and returns the different clusters. We fixed a random seed to ensure reproducibility of our taxonomy. By the end of the process, we get two figures saved in the folder `figure` (a figure to illustrate the gap statistics evolution and one to quantify the ratio between the first hop and the last hop before reaching a "public" IP address) and a list of prefixes that we have identified as using squat CGNAT addresses. If for any reason, you have changed the name of the previous output, please reflect the change on that script. 
 
+```
+python3 kmeanNAT444.py
+```
 
 ### Routers and middleboxes 
 
 #### 
 
 ## Step 4 Statistics:
+We give access to all the scripts that yield the plot in Section 4 of the manuscript and the different statistics that we documented. The scripts in this section can be found in the Statistics folder.
 
-We give access to all the scripts that yield the plot in Section 4 of the manuscript. 
+### Squat space evolution
+
+We describe the script to generate the Figure 1 and discusses the evolution of the unannonced squat space.
+1. Generate historical announcements of the prefixes of interest (squat prefixes, DoD prefixes or whatever prefixes you want to compare with) from startdate and enddate of interest. Run `get_route_history.sh` and save its output in a file named `$output`. To modify the prefixes selected and the start date and end date, you have to change the variable `routes` and configure the start time and end time of interest next to  `starttime=` and `endtime=`.
+```
+./get_route_history.sh >> $output 
+```
+The default `$output` is `../../data/route_history.json`. 
+2. Run `route_history.py` on the historical announcement code output to obtain aggregated data within a /8 and save the data in `../../data/ripe_dod_history.txt`
+```
+ python3 route_history.py $output 
+ ```
+3 Generate the plot with `visualization_squat_space.py` and is saved in `../../result/announcement-history-dod.pdf`
 
 
+### Filtering effects 
+
+The script for Figure 5 is called `statisticsfilter.py` and will iterate the same parameters as the one in the manuscript automatically. If you are interested in other statistics, you can also run it for different m and n by changing the list of `ms = [200, 500, 1000, 2500, 5000, 100000, 250 * 10 ** 2, 1000*100, 5 * 10 ** 5]` and `ns = [2, 5, 10, 25, 50, 100, 250, 1000, 5000].`
+Then all is needed is to run:
+```
+python3 statisticsfiltering.py  
+```
+It will also plot Figure 10 the CDF of the frequency of traceroutes and sources that have observed squat addresses.
+
+### Squatted hop position 
+
+The script for Figure 7 is called `CDFhopposition.py` and will generate the position of the squat addresses for different datasets. 
+
+### Comparing and contrasting Microsoft, Ark and RIPE and Venn Diagramm
+
+In order to compare for each data sources and merged:
+* the number of organizations, 
+* the number of squat IP address observed
+* the number of attributions
+* the ratio of attributions
+* the number of different squat IP observed
+* the number of different squat /24 observed
+
+and comparing the differences between the different data sources, we build the Parser scripts that stitches all the squat information together in a single pandas Dataframe and generate the statistics. It is a process intensive script that returns all the statistics of interest in the command line and will create a temporary version of the file in the temp folder. Make sure to flush it after usage. The script also generates the Venn Diagram in Figure 9.
+
+```
+python3 Parser.py
+```
+
+### BGP announcements visualisations
+
+To replicate Figure 11 and look at the median visibility and number of illegitimate announcements:
+1. Run the script `RIPE_history.py` in the folder BGPCode and save the output at `$output`.
+```
+python3 RIPE_history.py --outputname $output
+```
+2 Run the scripts `visual_announcements.py` associated with the earlier output in the folder `BGPanalysis`. 
+```
+python3 visual_announcements.py --input $output
+```
+The script will output the two figures as observed in the manuscript in the folder result and called `squat_prefixes_*`. The other scripts in that folder looks at the burstiness of the announcements, the diversity of path for legitimate and illegitimate announcements and have not been inserted in the manuscript because of space constraints. 
+
+
+## Step 5: Case Study
+To replicate the case study, we 
 
 ## Contribution guidelines ##
 

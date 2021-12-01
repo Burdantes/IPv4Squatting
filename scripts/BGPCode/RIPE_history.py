@@ -1,5 +1,7 @@
 import urllib.request, json
 import pandas as pd
+import sys
+sys.path.append('../../')
 from util import load_squatspace_default,load_squat_prefix
 import os
 from collections import defaultdict
@@ -65,7 +67,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="A script to crawl RIPE History API")
     parser.add_argument("--prefixes", action="store", default=list_of_prefixes, required=False,
                         help="The prefixes that you want to crawl.")
-    parser.add_argument("--outputname", action="store", default="../data/history_ripe_complete.csv", required=False,
+    parser.add_argument("--outputname", action="store", default="../../data/history_ripe_complete.csv", required=False,
                         help="The output file.")
 
     args = parser.parse_args()
