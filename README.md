@@ -51,7 +51,7 @@ To get unannounced prefixes for each month between `$start_month` and `$end_mont
 The list of unannounced prefixes for `$month` is stored in `./data/unannounced-2021$month.txt`
 
 
-For example, `./scripts/collect_bgp_dumps_2021.sh 9 10` will generate two files `unannounced-202109.txt` and `unannounced-202110.txt` in `./data/`
+For example, `./scripts/collect_bgp_dumps_2021.sh 9 10 2021` will generate two files `unannounced-202109.txt` and `unannounced-202110.txt` in `./data/`
 
 ### Traceroutes (fetching from RIPE's server)
 
