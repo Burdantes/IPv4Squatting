@@ -268,7 +268,7 @@ Follow these steps to get attribution results
 
 2. Suppose the traceroutes with hop-AS mapping is in file `$squatspace_path` and result goes to `$squatspace_result`, then run 
 ```
-cat $squatspace_path | python3 analyze.py > $squatspace_result
+cat $squatspace_path | python3 ./scripts/Attribution/analyze.py > $squatspace_result
 ```
 
 The attribution runs two passes, the second pass attempts to attribute the unattributable traceroutes in the initial pass by some additional heuristics and has less confidence. The results from two passes are separated by
