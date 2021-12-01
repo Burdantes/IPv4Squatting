@@ -3,7 +3,7 @@ import dns.resolver as dnsres
 import dns.reversename as dnsrever
 
 # Opening JSON file
-f = open('speedcheckerToSquatters.json', )
+f = open('../../result/CaseStudy/speedcheckerToSquatters.json', )
 
 # returns JSON object as
 # a dictionary
@@ -13,7 +13,7 @@ set_of_internal_looking_ASes = []
 set_of_external_looking_ASes = []
 set_of_unresponsive = []
 dic_val = {}
-
+all_the_ases_considered = []
 ind = 0
 for t in data:
     to_keep = []
@@ -28,6 +28,7 @@ for t in data:
         to_keep.append(s['IP'])
         rtt_list.append(s['PingTime'])
         as_mapping.append(s['ASN'])
+        all_the_ases_considered.append(s['ASN'])
         # try:
         #     domain_address = dnsrever.from_address(s['IP'])
         #     dns = str(dnsres.query(domain_address, 'PTR')[0])
@@ -58,6 +59,8 @@ print(len(set(set_of_internal_looking_ASes)))
 print(len(set(set_of_external_looking_ASes)))
 # print(data)
 print(list(set(set_of_unresponsive)))
+print('Number of Probes in Speedchecker considered:')
+print(len(list(set(set_of_unresponsive)))+len(set(set_of_internal_looking_ASes))+len(set(set_of_external_looking_ASes)))
 # print(dic_val)
 with open("example_of_external_speedchecker.json", 'w') as fout:
     json_dumps_str = json.dumps(dic_val)

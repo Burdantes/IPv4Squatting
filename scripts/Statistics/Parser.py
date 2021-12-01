@@ -61,6 +61,7 @@ def comparing_new_ases_arriving(df):
     squatting_ASes_before = df_before['squat_org'].value_counts().index
     print('Org that are still here afterwards', len(set(squatting_ASes_before).intersection(set(squatting_ASes_after))))
     print('Org that appear only afterwards', len(set(squatting_ASes_after)-(set(squatting_ASes_before))))
+    print('Org that appear only beforehand', len(set(squatting_ASes_before)-(set(squatting_ASes_after))))
     with open('../../result/CaseStudy/ases_squatting_only_after.txt', 'w') as f:
         for ases in list(set(squatting_ASes_after)-(set(squatting_ASes_before))):
             print(ases, file=f)

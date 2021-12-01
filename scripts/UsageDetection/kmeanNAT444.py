@@ -10,7 +10,7 @@ from tqdm import tqdm
 import sys
 sys.path.append('../../')
 import util
-sns.set_context("paper", rc={"font.size":10,"axes.titlesize":10,"axes.labelsize":18,"axes.xlabel":18,"axes.ylabel":18})
+sns.set_context("paper", rc={"font.size":16,"axes.titlesize":10,"axes.labelsize":18,"axes.xlabel":18,"axes.ylabel":18})
 
 MISSING_TRIE_VAL = '*'
 
@@ -61,7 +61,8 @@ print(df.shape)
 
 kmeans = KMeans(n_clusters=9,random_state=11092021)
 scaler = StandardScaler()
-scaled_features = scaler.fit_transform(df_features.values)
+# scaled_features = scaler.fit_transform(df_features.values)
+scaled_features = df_features.values
 print(scaled_features)
 kmeans.fit(scaled_features)
 
@@ -94,14 +95,14 @@ def compute_gap(clustering, data, k_max=5, n_references=5):
     gap = np.log(reference_inertia) - np.log(ondata_inertia)
     return gap, np.log(reference_inertia), np.log(ondata_inertia)
 
-X = df_features.values
-k_max = 50
-gap, reference_inertia, ondata_inertia = compute_gap(KMeans(), X, k_max)
-
-plt.plot(range(1, k_max+1), gap, '-o')
-plt.ylabel('gap')
-plt.xlabel('k')
-plt.savefig('figures/gap_statistics.png')
+# X = df_features.values
+# k_max = 50
+# gap, reference_inertia, ondata_inertia = compute_gap(KMeans(), X, k_max)
+#
+# plt.plot(range(1, k_max+1), gap, '-o')
+# plt.ylabel('gap')
+# plt.xlabel('k')
+# plt.savefig('figures/gap_statistics.png')
 
 # Final locations of the centroid
 print(Counter(kmeans.labels_))
@@ -114,7 +115,7 @@ for elem in centroids:
 list_of_cgnat_addresses = {}
 # updated_label = {0:'Large CPE',1:'Large CGNAT',2:'CPE NATs', 3:'CPE NATs',4:"Medium CGNAT",5:'Unknown'}
 # updated_label = {0: "Small CPE",1:"Medium CGNAT",2:"Large CPE", 3: "Medium CPE", 4:"Medium CGNAT",5:'Large CPE',6:'Medium CPE',7:'Medium CGNAT',8:'Large CGNAT',9:'Small CPE',10:'Medium CGNAT',11:'Large CPE',12:'Small CPE',13:'Medium CPE'}
-updated_label = {0:'Small CPE',1:'Medium CGNAT',2:'Small CPE',3:'Large CPE',4:'Medium CPE',5:'Large CGNAT',6:'Small CPE',7:'Large CPE',8:'Medium CGNAT'}
+updated_label = {0:'Large CGNAT',1:'Small CPE',2:'Small CPE',3:'Medium CGNAT',4:'Ambiguous CPE/CGNAT',5:'Large CGNAT',6:'Large CGNAT',7:'Large CPE',8:'Large CGNAT'}
 label = []
 for i in kmeans.labels_:
     label.append(updated_label[i])
@@ -124,7 +125,7 @@ for s,t in zip(df['Source Prefix'],df['Labels']):
         list_of_cgnat_addresses[s] = t
 #fig, ax = plt.subplots(figsize=(8, 5))
 cdict = {-1:'grey', 0: 'pink' ,1: 'red', 2: 'blue', 3: 'green',4:'yellow',5:'purple',6:'black',7:'gold',8:'purple',9:'black',10:'white',11:'brown',12:'olive',13:'grey',14:'magenta'}
-x_scatter = np.array(df['Latency_connected_components'].values)
+x_scatter = np.array(df['Median Ratio'].values)
 y_scatter = np.array(df['Tree Depth'].values)
 fig, ax = plt.subplots()
 for g in np.unique(kmeans.labels_):
@@ -136,7 +137,7 @@ plt.ylabel(ylabel = 'Tree depth')
 plt.show()
 fig, ax = plt.subplots(figsize=(8, 5))
 # b = sns.boxplot(y="Median RTT", x="Labels",width=0.3,data=df,ax=ax,)
-b = sns.boxplot(y="Latency_connected_components", x="Labels",width=0.3,data=df,ax=ax,whis=[2.5, 97.5])
-ax.set_ylabel('Latency in Connected Components',size=14)
+b = sns.boxplot(y="Median Ratio", x="Labels",width=0.3,data=df,ax=ax,whis=[2.5, 97.5])
+ax.set_ylabel('Median Ratio',size=14)
 ax.set_xlabel('Inferred configurations', size = 14)
 plt.savefig('figures/validation_of_nat444_infer.pdf')

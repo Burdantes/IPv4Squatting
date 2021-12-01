@@ -191,19 +191,26 @@ path_to_probes = '../../data/MetaInformation/20210630.json'
 probes = {d['id']: d for d in json.load(open(path_to_probes))['objects']}
 df_probes = pd.DataFrame(probes).transpose()
 list_of_cities_in_probes = {}
-probes = reading_squatters_DoD()
-print(probes)
-ASes_to_probes = dict()
-count_number_of_probes = 0
-for t in probes:
-    print(t)
-    pro = t.split(' ')[0]
-    if (int(pro) in df_probes['asn_v4'].values):
-        ind = list(df_probes[df_probes['asn_v4']==int(pro)].index)
-        # for pr in ind:
-        count_number_of_probes += len(ind)
-        ASes_to_probes[pro] = [ind,t.split(' ')[1]]
-print(count_number_of_probes)
+# df_probes =df_probes[df_probes['status_name']=='Connected']
+# probes = reading_squatters_DoD()
+# print(probes)
+# ASes_to_probes = dict()
+# count_number_of_probes = 0
+# ases_considered = []
+# already_counted = []
+# for t in probes:
+#     print(t)
+#     pro = t.split(' ')[0]
+#     if (int(pro) in df_probes['asn_v4'].values):
+#         ases_considered.append(pro)
+#         ind = list(df_probes[df_probes['asn_v4']==int(pro)].index)
+#         # for pr in ind:
+#         if not(pro in already_counted):
+#             count_number_of_probes += len(ind)
+#             already_counted.append(pro)
+#         ASes_to_probes[pro] = [ind,t.split(' ')[1]]
+# print('Number of Ases considered', len(set(ases_considered)))
+# print('Number of total probes considered',count_number_of_probes)
 # scheduling_specific_measurements(ASes_to_probes)
 
 def reading_IXP(ixp_interfaces_file = '../data/IXP/interfaces_ixp-20210504.txt'):
@@ -220,146 +227,146 @@ def reading_IXP(ixp_interfaces_file = '../data/IXP/interfaces_ixp-20210504.txt')
                 dico[fields[0]] = fields[1]+'-'+fields[2]
     return dico
 
-# txt_interconnection = []
-# my_measures = []
-# for rounds in ['First_round','Second_round','third_round','fourth_round','fifth_round','sixth_round']:
-#     with open('Measurements/'+rounds+'.txt') as f:
-#         my_measure = f.read()
-#         my_measure = my_measure.split('\n')[:-1]
-#         my_measures.extend(my_measure)
-# print(my_measures)
-# c = Cymru()
-# dico = {}
-# dico_internal = {}
-# dico_external = {}
-# set_of_internal_looking_ASes = []
-# set_of_external_looking_ASes = []
-# final_res_to_plot = defaultdict(lambda: [])
-# set_of_countries = defaultdict(lambda : [])
-# IXP_mapping = reading_IXP('/Users/geode/Documents/GitHub/missing-peering-links/data/IXP/interfaces_ixp-20210504.txt')
-# for msm_id in tqdm(my_measures[:-1]):
-#     msm_id = ast.literal_eval(msm_id)
-#     print(msm_id[0])
-#     msm_id = msm_id[0]
-#     with urllib.request.urlopen(
-#             "https://atlas.ripe.net/api/v2/measurements/%d/results/?format=txt" % msm_id) as my_results:
-#         results = my_results.readlines()
-#         for my_result in results:
-#             try:
-#                 atlas_results = Result.get(my_result.decode("utf-8"))
-#                 if atlas_results.type != 'traceroute':
-#                     continue
-#                 to_keep,pos_for_stars = finding_last_responsive_hop(atlas_results.ip_path)
-#                 as_mapping = c.resolve(to_keep)
-#                 add = 0
-#                 for k in range(len(to_keep)):
-#                     # k_bis = k
-#                     if k  <= len(as_mapping) - 1:
-#                         if as_mapping[k][0] != to_keep[k]:
-#                             # add += 1
-#                             as_mapping.insert(k,(to_keep[k],'NA'))
-#                     else:
-#                         as_mapping.append((to_keep[k],'NA'))
-#                 new_mapping = []
-#                 # print(df_probes[df_probes.index==atlas_results.probe_id]['asn_v4'].values[0])
-#                 cc_code = df_probes[df_probes.index==atlas_results.probe_id]['country_code'].values[0]
-#                 # print(cc_code)
-#                 if cc_code is None:
-#                     continue
-#                 new_mapping.append('AS' + str(df_probes[df_probes.index==atlas_results.probe_id]['asn_v4'].values[0]))
-#                 for t in as_mapping[1:]:
-#                     if t[0] in IXP_mapping.keys():
-#                         new_mapping.append('AS'+IXP_mapping[t[0]])
-#                     else:
-#                         new_mapping.append(t[1])
-#                 as_mapping = [a_tuple[1] for a_tuple in as_mapping]
-#                 list_of_dns = []
-#                 for t in to_keep:
-#                     try:
-#                         domain_address = dnsrever.from_address(t)
-#                         dns = str(dnsres.query(domain_address, 'PTR')[0])
-#                     except:
-#                         dns = ''
-#                     list_of_dns.append(dns)
-#                 rtt_list = []
-#                 for t in atlas_results.hops:
-#                     interm_list = []
-#                     for s in t.packets:
-#                         interm_list.append(s.rtt)
-#                     try:
-#                         rtt_list.append(min(interm_list))
-#                     except:
-#                         try:
-#                             rtt_list.append(interm_list[0])
-#                         except:
-#                             continue
-#                 for position in pos_for_stars:
-#                     as_mapping.insert(position, '*')
-#                     new_mapping.insert(position,'*')
-#                     to_keep.insert(position,'*')
-#                     list_of_dns.insert(position,'*')
-#                 dico.update({cc_code + ':' + str(atlas_results.probe_id) + ":" + atlas_results.destination_name: [to_keep, rtt_list,new_mapping,as_mapping,list_of_dns]})
-#                 as_path = list(set(as_mapping))
-#                 if len(as_path) > 2:
-#                     # print('This one exits')
-#                     if not(atlas_results.probe_id in list_of_cities_in_probes):
-#                         list_of_cities_in_probes[atlas_results.probe_id] = city_state_country((df_probes[df_probes.index == atlas_results.probe_id]['latitude'].values[0],df_probes[df_probes.index == atlas_results.probe_id]['longitude'].values[0]))
-#                     set_of_countries[
-#                         str(df_probes[df_probes.index == atlas_results.probe_id]['asn_v4'].values[0]) + '-' + str(
-#                             atlas_results.destination_name) + '-EXIT'].append(
-#                         cc_code + '-' + list_of_cities_in_probes[atlas_results.probe_id])
-#                     dico_external.update({str(atlas_results.probe_id) + ":" + atlas_results.destination_name + ':'+str(df_probes[df_probes.index==atlas_results.probe_id]['asn_v4'].values[0]): [to_keep, rtt_list,new_mapping,as_mapping,list_of_dns]})
-#                     set_of_external_looking_ASes.append(str(df_probes[df_probes.index==atlas_results.probe_id]['asn_v4'].values[0]))
-#                     final_res_to_plot[
-#                         str(df_probes[df_probes.index == atlas_results.probe_id]['asn_v4'].values[0]) + '-' + str(
-#                             atlas_results.destination_name)].append('Exit')
-#                 else:
-#                     if not (atlas_results.probe_id in list_of_cities_in_probes):
-#                         list_of_cities_in_probes[atlas_results.probe_id] = city_state_country((
-#                             df_probes[df_probes.index == atlas_results.probe_id]['latitude'].values[0],
-#                             df_probes[df_probes.index == atlas_results.probe_id]['longitude'].values[0]))
-#                     set_of_countries[
-#                         str(df_probes[df_probes.index == atlas_results.probe_id]['asn_v4'].values[0]) + '-' + str(atlas_results.destination_name) +'-REMAIN'].append(
-#                         cc_code + '-' + list_of_cities_in_probes[atlas_results.probe_id])
-#                     final_res_to_plot[
-#                         str(df_probes[df_probes.index == atlas_results.probe_id]['asn_v4'].values[0]) + '-' + str(
-#                             atlas_results.destination_name)].append('Remain')
-# 
-#                     # print(new_mapping)
-#                     pos = []
-#                     for i, j in enumerate(new_mapping):
-#                         if j == new_mapping[0]:
-#                             pos.append(i)
-#                     # if pos[-1] >= len(new_mapping) - 2:
-#                     #     print('INTERNAL ROUTING')
-# 
-#                     dico_internal.update({str(atlas_results.probe_id) + ":" + atlas_results.destination_name + ':'+str(df_probes[df_probes.index==atlas_results.probe_id]['asn_v4'].values[0]): [to_keep, rtt_list,new_mapping,as_mapping,list_of_dns]})
-#                     set_of_internal_looking_ASes.append(str(df_probes[df_probes.index==atlas_results.probe_id]['asn_v4'].values[0]))
-#                 # print(set_of_countries)
-#                 if rtt_list[-1] is None:
-#                     continue
-#                 if rtt_list[-1] < 2:
-#                     print(new_mapping[0] + ' and ' + new_mapping[-1] + 'are interconnected')
-#                     txt_interconnection.append((new_mapping[0], new_mapping[-1]))
-#             except:
-#                 continue
-#             # print(dico)
-# # print(dico_external)
-# # print('INTERNAL')
-# # print(dico_internal)
-# print(Counter(set_of_external_looking_ASes))
-# print(Counter(set_of_internal_looking_ASes))
-# print(len(Counter(set_of_internal_looking_ASes)))
-# print(len(Counter(set_of_external_looking_ASes)))
-# print(set(set_of_external_looking_ASes) & set(set_of_internal_looking_ASes))
-# for t in final_res_to_plot.keys():
-#     final_res_to_plot[t] = Counter(final_res_to_plot[t])
-# with open("count_of_internal+external_perIP.json", 'w') as fout:
-#     json_dumps_str = json.dumps(final_res_to_plot)
-#     print(json_dumps_str, file=fout)
-# with open("example_of_external.json", 'w') as fout:
-#     json_dumps_str = json.dumps(dico_external)
-#     print(json_dumps_str, file=fout)
-# with open("example_of_internal.json", 'w') as fout:
-#     json_dumps_str = json.dumps(dico_internal)
-#     print(json_dumps_str, file=fout)
+txt_interconnection = []
+my_measures = []
+for rounds in ['First_round','Second_round','third_round','fourth_round','fifth_round','sixth_round']:
+    with open('Measurements/'+rounds+'.txt') as f:
+        my_measure = f.read()
+        my_measure = my_measure.split('\n')[:-1]
+        my_measures.extend(my_measure)
+print(my_measures)
+c = Cymru()
+dico = {}
+dico_internal = {}
+dico_external = {}
+set_of_internal_looking_ASes = []
+set_of_external_looking_ASes = []
+final_res_to_plot = defaultdict(lambda: [])
+set_of_countries = defaultdict(lambda : [])
+IXP_mapping = reading_IXP('/Users/geode/Documents/GitHub/missing-peering-links/data/IXP/interfaces_ixp-20210504.txt')
+for msm_id in tqdm(my_measures[:-1]):
+    msm_id = ast.literal_eval(msm_id)
+    print(msm_id[0])
+    msm_id = msm_id[0]
+    with urllib.request.urlopen(
+            "https://atlas.ripe.net/api/v2/measurements/%d/results/?format=txt" % msm_id) as my_results:
+        results = my_results.readlines()
+        for my_result in results:
+            # try:
+                atlas_results = Result.get(my_result.decode("utf-8"))
+                if atlas_results.type != 'traceroute':
+                    continue
+                to_keep,pos_for_stars = finding_last_responsive_hop(atlas_results.ip_path)
+                as_mapping = c.resolve(to_keep)
+                add = 0
+                for k in range(len(to_keep)):
+                    # k_bis = k
+                    if k  <= len(as_mapping) - 1:
+                        if as_mapping[k][0] != to_keep[k]:
+                            # add += 1
+                            as_mapping.insert(k,(to_keep[k],'NA'))
+                    else:
+                        as_mapping.append((to_keep[k],'NA'))
+                new_mapping = []
+                # print(df_probes[df_probes.index==atlas_results.probe_id]['asn_v4'].values[0])
+                cc_code = df_probes[df_probes.index==atlas_results.probe_id]['country_code'].values[0]
+                # print(cc_code)
+                if cc_code is None:
+                    continue
+                new_mapping.append('AS' + str(df_probes[df_probes.index==atlas_results.probe_id]['asn_v4'].values[0]))
+                for t in as_mapping[1:]:
+                    if t[0] in IXP_mapping.keys():
+                        new_mapping.append('AS'+IXP_mapping[t[0]])
+                    else:
+                        new_mapping.append(t[1])
+                as_mapping = [a_tuple[1] for a_tuple in as_mapping]
+                list_of_dns = []
+                for t in to_keep:
+                    try:
+                        domain_address = dnsrever.from_address(t)
+                        dns = str(dnsres.query(domain_address, 'PTR')[0])
+                    except:
+                        dns = ''
+                    list_of_dns.append(dns)
+                rtt_list = []
+                for t in atlas_results.hops:
+                    interm_list = []
+                    for s in t.packets:
+                        interm_list.append(s.rtt)
+                    try:
+                        rtt_list.append(min(interm_list))
+                    except:
+                        try:
+                            rtt_list.append(interm_list[0])
+                        except:
+                            continue
+                for position in pos_for_stars:
+                    as_mapping.insert(position, '*')
+                    new_mapping.insert(position,'*')
+                    to_keep.insert(position,'*')
+                    list_of_dns.insert(position,'*')
+                dico.update({cc_code + ':' + str(atlas_results.probe_id) + ":" + atlas_results.destination_name: [to_keep, rtt_list,new_mapping,as_mapping,list_of_dns]})
+                as_path = list(set(as_mapping))
+                if len(as_path) > 2:
+                    # print('This one exits')
+                    if not(atlas_results.probe_id in list_of_cities_in_probes):
+                        list_of_cities_in_probes[atlas_results.probe_id] = city_state_country((df_probes[df_probes.index == atlas_results.probe_id]['latitude'].values[0],df_probes[df_probes.index == atlas_results.probe_id]['longitude'].values[0]))
+                    set_of_countries[
+                        str(df_probes[df_probes.index == atlas_results.probe_id]['asn_v4'].values[0]) + '-' + str(
+                            atlas_results.destination_name) + '-EXIT'].append(
+                        cc_code + '-' + list_of_cities_in_probes[atlas_results.probe_id])
+                    dico_external.update({str(atlas_results.probe_id) + ":" + atlas_results.destination_name + ':'+str(df_probes[df_probes.index==atlas_results.probe_id]['asn_v4'].values[0]): [to_keep, rtt_list,new_mapping,as_mapping,list_of_dns]})
+                    set_of_external_looking_ASes.append(str(df_probes[df_probes.index==atlas_results.probe_id]['asn_v4'].values[0]))
+                    final_res_to_plot[
+                        str(df_probes[df_probes.index == atlas_results.probe_id]['asn_v4'].values[0]) + '-' + str(
+                            atlas_results.destination_name)].append('Exit')
+                else:
+                    if not (atlas_results.probe_id in list_of_cities_in_probes):
+                        list_of_cities_in_probes[atlas_results.probe_id] = city_state_country((
+                            df_probes[df_probes.index == atlas_results.probe_id]['latitude'].values[0],
+                            df_probes[df_probes.index == atlas_results.probe_id]['longitude'].values[0]))
+                    set_of_countries[
+                        str(df_probes[df_probes.index == atlas_results.probe_id]['asn_v4'].values[0]) + '-' + str(atlas_results.destination_name) +'-REMAIN'].append(
+                        cc_code + '-' + list_of_cities_in_probes[atlas_results.probe_id])
+                    final_res_to_plot[
+                        str(df_probes[df_probes.index == atlas_results.probe_id]['asn_v4'].values[0]) + '-' + str(
+                            atlas_results.destination_name)].append('Remain')
+
+                    # print(new_mapping)
+                    pos = []
+                    for i, j in enumerate(new_mapping):
+                        if j == new_mapping[0]:
+                            pos.append(i)
+                    # if pos[-1] >= len(new_mapping) - 2:
+                    #     print('INTERNAL ROUTING')
+
+                    dico_internal.update({str(atlas_results.probe_id) + ":" + atlas_results.destination_name + ':'+str(df_probes[df_probes.index==atlas_results.probe_id]['asn_v4'].values[0]): [to_keep, rtt_list,new_mapping,as_mapping,list_of_dns]})
+                    set_of_internal_looking_ASes.append(str(df_probes[df_probes.index==atlas_results.probe_id]['asn_v4'].values[0]))
+                # print(set_of_countries)
+                if rtt_list[-1] is None:
+                    continue
+                if rtt_list[-1] < 2:
+                    print(new_mapping[0] + ' and ' + new_mapping[-1] + 'are interconnected')
+                    txt_interconnection.append((new_mapping[0], new_mapping[-1]))
+            # except:
+            #     continue
+            # print(dico)
+# print(dico_external)
+# print('INTERNAL')
+# print(dico_internal)
+print(Counter(set_of_external_looking_ASes))
+print(Counter(set_of_internal_looking_ASes))
+print(len(Counter(set_of_internal_looking_ASes)))
+print(len(Counter(set_of_external_looking_ASes)))
+print(set(set_of_external_looking_ASes) & set(set_of_internal_looking_ASes))
+for t in final_res_to_plot.keys():
+    final_res_to_plot[t] = Counter(final_res_to_plot[t])
+with open("count_of_internal+external_perIP.json", 'w') as fout:
+    json_dumps_str = json.dumps(final_res_to_plot)
+    print(json_dumps_str, file=fout)
+with open("example_of_external.json", 'w') as fout:
+    json_dumps_str = json.dumps(dico_external)
+    print(json_dumps_str, file=fout)
+with open("example_of_internal.json", 'w') as fout:
+    json_dumps_str = json.dumps(dico_internal)
+    print(json_dumps_str, file=fout)
