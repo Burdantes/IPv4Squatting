@@ -48,7 +48,7 @@ To get unannounced prefixes for each month between `$start_month` and `$end_mont
 ```
 ./scripts/collect_bgp_dumps_multiple.sh $start_month $end_month $year
 ```
-The list of unannounced prefixes for `$month` is stored in `./data/unannounced-2021$month.txt`
+The list of unannounced prefixes for `$month` is stored in `./data/unannounced-$year$month.txt`
 
 
 For example, `./scripts/collect_bgp_dumps_multiple.sh 9 10 2021` will generate two files `unannounced-202109.txt` and `unannounced-202110.txt` in `./data/`
