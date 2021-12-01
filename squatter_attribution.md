@@ -1,3 +1,11 @@
+# Requirements
+## Python
+- 
+## Others
+- [bgpdump](https://github.com/RIPE-NCC/bgpdump)
+- [scamper](https://www.caida.org/catalog/software/scamper/)
+
+
 # Find unannounced IPv4 space
 To get unannounced prefixes for each month between `$start_month` and `$end_month` in '$year', run the following
 ```
