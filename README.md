@@ -43,18 +43,15 @@ $ pip install aggregate-prefixes
 
 ## Step 1 : Data Collection and Processing
 
-### Find Unannounced IPv4 Space
+### Find unannounced IPv4 space
+To get unannounced prefixes for each month between `$start_month` and `$end_month` in '$year', run the following
+```
+./scripts/collect_bgp_dumps_2021.sh $start_month $end_month $year
+```
+The list of unannounced prefixes for `$month` is stored in `./data/unannounced-2021$month.txt`
 
-Begin BGP data collection with the `collection_bgp_dumps.sh` script which downloads 1 weekday snapshot per RIPE RIS collector per week into the directory which it is run. Each generated file contains a prefix-asn mapping.
 
-Run the following command to output all distrinct prefixes that have ASN mappings
-```
-gunzip -kc *.gz | LC_ALL=C sort -k1V,1V -k2n,2n | uniq > prefix-asn-YYYYMM.txt
-```
-and then
-```
-./unannounced.py prefix-asn-YYYYMM.txt > unannounced-YYYYMM.txt
-```
+For example, `./scripts/collect_bgp_dumps_2021.sh 9 10` will generate two files `unannounced-202109.txt` and `unannounced-202110.txt` in `./data/`
 
 ### Traceroutes (fetching from RIPE's server)
 
