@@ -312,6 +312,12 @@ python3 kmeanNAT444.py
 ```
 
 ### Routers and middleboxes 
+To identify router and middlebox squat address configuration, use `./scripts/router_config.py`. The input to the script is the file `$squatspace_path` containing the mapping between hops and ASes (the output of `./scripts/tr_pathfix.py`). The script usage is
+```
+python3 ./scripts/router_config.py $squatspace_path
+```
+
+The output of the scripts consists of traceroutes that are identified with squat addresses deployed on routers, and at the end of each line a classification is given (`internal_router`, `border_router` or `unmapped_router`)
 
 #### 
 
