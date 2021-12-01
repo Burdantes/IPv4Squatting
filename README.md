@@ -240,29 +240,29 @@ Suppose the traceroutes with squat addresses are in file `$squatspace_full` and 
 
 For Ark data run 
 ```
-cat $squatspace_full | python3 ./scripts/tr_pathfix.py -ark > $squatspace_path
+cat $squatspace_full | python3 ./scripts/Attribution/tr_pathfix.py -ark > $squatspace_path
 ```
 
 For Microsoft data run
 ```
-cat $squatspace_full | python3 ./scripts/tr_pathfix.py -msft > $squatspace_path
+cat $squatspace_full | python3 ./scripts/Attribution/tr_pathfix.py -msft > $squatspace_path
 ``` 
 
 For RIPE data run
 ```
-cat $squatspace_full | python3 ./scripts/tr_pathfix.py > $squatspace_path
+cat $squatspace_full | python3 ./scripts/Attribution/tr_pathfix.py > $squatspace_path
 ```
 
 For example, to apply to the parsed Ark traceroute stored in `temp/ams-nl.20200402.1585792800.warts.gz.parsed.squat.full.txt` (see previous section how to parse Ark), we can run
 ```
 squatspace_full=temp/ams-nl.20200402.1585792800.warts.gz.parsed.squat.full.txt
 squatspace_path=temp/ams-nl.20200402.1585792800.warts.gz.parsed.squat.path.txt
-cat $squatspace_full | python3 ./scripts/tr_pathfix.py -ark > $squatspace_path
+cat $squatspace_full | python3 ./scripts/Attribution/tr_pathfix.py -ark > $squatspace_path
 ```
 
 ### Get squatter attribution
 Follow these steps to get attribution results
-1. Use the desired unannounced IPv4 space. You may want to use the unannounced space for a specific month, to do this, open `scripts/util.py`, modify the `default_file` vairable in function `load_squatspace_default` to be the file name containing the unannounced squat prefixes that you want to use (see previous section for how to generate unannounced squat prefixes). For example, the default file in the code is `data/unannounced-202107.txt`
+1. Use the desired unannounced IPv4 space. You may want to use the unannounced space for a specific month, to do this, open `scripts/Attribution/util.py`, modify the `default_file` vairable in function `load_squatspace_default` to be the file name containing the unannounced squat prefixes that you want to use (see previous section for how to generate unannounced squat prefixes). For example, the default file in the code is `data/unannounced-202107.txt`
 
 2. Suppose the traceroutes with hop-AS mapping is in file `$squatspace_path` and result goes to `$squatspace_result`, then run 
 ```
