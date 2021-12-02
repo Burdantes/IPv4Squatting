@@ -114,8 +114,8 @@ for i,elem in enumerate(centroids):
     print(i,dict(zip(['# of Connected Components','Tree Depth','Number of Sinks','Max Distance to the CGNAT candidate','# of Edges','Median RTT','25 RTT','75 RTT','Median hop','25 hop', '75 hop','Number of Prefixes',],elem)))
     # print(elem[[0,2,-6,-5]])
 list_of_cgnat_addresses = {}
-updated_label = {0:'Large CGNAT',1:'Small CPE',2:'Small CPE',3:'Medium CGNAT',4:'Large CPE',5:'Large CGNAT',6:'Large CGNAT',7:'Large CPE',8:'Large CGNAT'}
-updated_label = {0:'Small NAT444',1:'Small NAT44',2:'Small NAT44',3:'Large NAT44',4:'Large NAT44',5:'Large NAT444',6:'Large NAT444',7:'Large NAT44',8:'Large NAT444'}
+# updated_label = {0:'Large CGNAT',1:'Small CPE',2:'Small CPE',3:'Medium CGNAT',4:'Large CPE',5:'Large CGNAT',6:'Large CGNAT',7:'Large CPE',8:'Large CGNAT'}
+updated_label = {0:'Small NAT444',1:'Small NAT44',2:'Unknown',3:'Large NAT44',4:'Unknown',5:'Large NAT444',6:'Large NAT44',7:'Large NAT44',8:'Large NAT444'}
 
 label = []
 for i in kmeans.labels_:

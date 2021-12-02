@@ -4,7 +4,7 @@ import ast
 import os
 from collections import Counter
 
-category = 'router'
+category = 'NATs'
 list_of_ases = []
 val = []
 AS_level_metainfos = pd.read_pickle(
@@ -17,13 +17,13 @@ organization_to_manually_assess = []
 if category == 'NATs':
     path = '../../result/labels_prefixes_nat444.csv'
     df = pd.read_csv(path,index_col = 0)
-    updated_label = {0:'Large CGNAT',1:'Small CPE',2:'Small CPE',3:'Medium CGNAT',4:'Ambiguous CPE/CGNAT',5:'Large CGNAT',6:'Large CGNAT',7:'Large CPE',8:'Large CGNAT'}
-    CGNATs = ['Large CGNAT', 'Medium CGNAT']
-    CPEs = ['Small CPE','Large CPE']
+    CGNATs = ['Large NAT444', 'Small NAT444']
+    CPEs = ['Small NAT44','Large NAT44']
+    Unknows = ['Unknown']
     # df = df[df['Labels'].isin(CPEs)]
     print('# of Source /24 NAT', df[df['Labels'].isin(CPEs)].shape)
     print('# of Source /24 CGNAT',df[df['Labels'].isin(CGNATs)].shape)
-    df = df[df['Labels'].isin(CPEs)]
+    df = df[df['Labels'].isin(Unknows)]
     print(df.shape)
     for ases,organization in zip(df['Source AS'],df['Source Org']):
     # col = col.split('|')[0:6]
@@ -92,10 +92,16 @@ elif category =='router':
             if int(ases) in PeeringDB['asn'].values:
                 print(PeeringDB[PeeringDB['asn'] == int(ases)])
                 if PeeringDB[PeeringDB['asn'] == int(ases)]['info_type'].values[0] == 'Content':
-                    val.append([AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['Eyeballs'].values[0],
+                    try:
+                        val.append([AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['Eyeballs'].values[0],
                                 AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['ASCone'].values[0],
                                 'Content', ases,
                                 organization])
+                    except:
+                        val.append([0,
+                                    0,
+                                    'Content', ases,
+                                    organization])
                 else:
                     ases = str(ases)
                     val.append([AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['Eyeballs'].values[0],
@@ -113,6 +119,55 @@ elif category =='router':
                     # print(row)
     # val[-1].append(PeeringDB[PeeringDB['asn']==ases]['info_type'].values[0])
     # print(PeeringDB[PeeringDB['asn']==ases]['info_type'].values[0])
+elif category == 'all_the_squatters':
+    path = ""
+    l = []
+    # all_the_squatters =
+    for row in border_text.readlines():
+        if row.startswith('#'):
+            continue
+        row = row.replace('\n', '')
+        # print(txt)
+        print(row)
+        l.append(row)
+        for ases in l:
+            try:
+                organization = AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['Organization'].values[0]
+                ases = int(ases)
+            except:
+                organization_to_manually_assess.append(ases)
+                continue
+            # print(organization)
+            list_of_ases.append(ases)
+            if ases == '763' or ases == '16160' or ases == '45725138877' or ases == '5579963916' or ases == '28303' or ases == '26415299662254739657427544396544396566396576397193397197397202' or ases == '26291' or ases == '24024':
+                continue
+            if ases == '15169':
+                print('HOLD ON')
+            # try:
+            # print(ases)
+            print(PeeringDB['asn'])
+            print(PeeringDB[PeeringDB['asn'] == int(ases)]['info_type'])
+            # try:
+            print(ases)
+            if int(ases) in PeeringDB['asn'].values:
+                print(PeeringDB[PeeringDB['asn'] == int(ases)])
+                if PeeringDB[PeeringDB['asn'] == int(ases)]['info_type'].values[0] == 'Content':
+                    val.append([AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['Eyeballs'].values[0],
+                                AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['ASCone'].values[0],
+                                'Content', ases,
+                                organization])
+                else:
+                    ases = str(ases)
+                    val.append([AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['Eyeballs'].values[0],
+                                AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['ASCone'].values[0],
+                                AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['ASType'].values[0], ases,
+                                organization])
+            else:
+                ases = str(ases)
+                val.append([AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['Eyeballs'].values[0],
+                            AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['ASCone'].values[0],
+                            AS_level_metainfos[AS_level_metainfos['asNumber'] == ases]['ASType'].values[0], ases,
+                            organization])
 print(val)
 print(len(list_of_ases))
 print(len(set(list_of_ases)))

@@ -4,8 +4,8 @@ import os
 path = '../../result/labels_prefixes_nat444.csv'
 df = pd.read_csv(path,index_col = 0)
 updated_label = {0:'Large CGNAT',1:'Small CPE',2:'Small CPE',3:'Medium CGNAT',4:'Ambiguous CPE/CGNAT',5:'Large CGNAT',6:'Large CGNAT',7:'Large CPE',8:'Large CGNAT'}
-CGNATs = ['Large CGNAT', 'Medium CGNAT']
-CPEs = ['Small CPE','Large CPE']
+CGNATs = ['Large NAT444', 'Small NAT444']
+CPEs = ['Unknown'] 
 counting_cgnat = 0
 counting_nat = 0
 restricted_prefixes_nat = df[df['Labels'].isin(CPEs)]['Source Prefix'].values

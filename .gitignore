@@ -2,5 +2,7 @@
 *.log
 */log/
 data/
-results/
+result/
 temp*
+.idea/
+.idea/workspace.xml

@@ -190,7 +190,11 @@ def scheduling_specific_measurements(AS_to_probes):
 path_to_probes = '../../data/MetaInformation/20210630.json'
 probes = {d['id']: d for d in json.load(open(path_to_probes))['objects']}
 df_probes = pd.DataFrame(probes).transpose()
+<<<<<<< Updated upstream
 list_of_cities_in_probes = {}
+=======
+# list_of_cities_in_probes = {}
+>>>>>>> Stashed changes
 # df_probes =df_probes[df_probes['status_name']=='Connected']
 # probes = reading_squatters_DoD()
 # print(probes)
@@ -369,4 +373,8 @@ with open("example_of_external.json", 'w') as fout:
     print(json_dumps_str, file=fout)
 with open("example_of_internal.json", 'w') as fout:
     json_dumps_str = json.dumps(dico_internal)
+<<<<<<< Updated upstream
     print(json_dumps_str, file=fout)
+=======
+    print(json_dumps_str, file=fout)
+>>>>>>> Stashed changes

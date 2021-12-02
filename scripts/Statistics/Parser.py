@@ -68,6 +68,14 @@ def comparing_new_ases_arriving(df):
     with open('../../result/CaseStudy/org_squatting_only_after.txt', 'w') as f:
         for ases in list(set(squatting_org_after)-(set(squatting_org_before))):
             print(ases, file=f)
+    squatting_ASes_after = df_after['squat_org'].value_counts().index
+    squatting_ASes_before = df_before['squat_org'].value_counts().index
+    print('Org that are still here afterwards', len(set(squatting_ASes_before).intersection(set(squatting_ASes_after))))
+    print('Org that appear only afterwards', len(set(squatting_ASes_after)-(set(squatting_ASes_before))))
+    print('Org that appear only beforehand', len(set(squatting_ASes_before)-(set(squatting_ASes_after))))
+    with open('../../result/CaseStudy/ases_squatting_only_after.txt', 'w') as f:
+        for ases in list(set(squatting_ASes_after)-(set(squatting_ASes_before))):
+            print(ases, file=f)
     with open('../../result/CaseStudy/org_squatting_DoD_after.txt', 'w') as f:
         for ases in list(squatting_org_after):
             print(ases, file=f)
@@ -575,8 +583,9 @@ if __name__ == '__main__':
     #     i = i.replace('\n','')
     #     l = i.split(' ')[1:]
     #     list_of_ASes_arkipelago.extend(l)
+    union =  union_org()
     for ind,s in zip(AS_level_metainfos.index,AS_level_metainfos['asNumber']):
-        if s in union_org():
+        if s in union:
             squatting_test[ind] = 'Squatting'
         elif s in list_of_ASes_arkipelago:
             squatting_test[ind] = 'Arkipelago Squatting'
