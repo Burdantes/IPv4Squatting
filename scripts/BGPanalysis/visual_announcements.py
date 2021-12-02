@@ -128,7 +128,120 @@ def heatmap(category):
     print(len(tot_origin))
     print(legitimate_announcements)
     print(illegitimate_announcements)
+    print(set_of_leakers)
+    return set_of_leakers
+
+def are_the_leakers_in_the_source(set_of_leakers):
+    all_the_leakers = []
+    for i in set_of_leakers.keys():
+        all_the_leakers.extend(set_of_leakers[i])
+    all_the_leakers = set(all_the_leakers)
+    rows = []
+    path = '../Statistics/count_statistics/'
+    for months in ['01', '03', '04', '05']:
+        for file in ['tracerouteasncounts-2021-' + months + '-10-2021-' + months + '-16.txt']:
+            if file.split('.')[-1] == 'txt':
+                file1 = open(path + file, "r")
+                col = file1.readline()
+                col = col.replace('\n', '')
+                # col = col.split('|')[0:6]
+                col = col.strip()
+                print(col)
+                col = col.split('	')
+                col.append('which_data')
+
+                for row in file1.readlines():
+                    # print(row)
+                    if row[0] == '#':
+                        continue
+                    row = row.replace('\n', '')
+                    row = row.split('	')
+                    row.append(file.split('-')[0])
+                    rows.append(row)
+    df = pd.DataFrame(rows, columns=col)
+    dn = df[df['#Field:count'].astype('int') > 5000]
+    # print(len(dn['endUserASN'].unique()))
+    # print(len(df['endUserASN'].unique()))
+    # rows = []
+    # for file in ['tracerouteasncounts-2021-08-10-2021-08-16.txt', 'squatasncounts-2021-08-10-2021-08-16.txt']:
+    #     if file.split('.')[-1] == 'txt':
+    #         file1 = open(path + '/' + file, "r")
+    #         col = file1.readline()
+    #         col = col.replace('\n', '')
+    #         # col = col.split('|')[0:6]
+    #         col = col.strip()
+    #         print(col)
+    #         col = col.split('	')
+    #         col.append('which_data')
+    #
+    #         for row in file1.readlines():
+    #             # print(row)
+    #             if row[0] == '#':
+    #                 continue
+    #             row = row.replace('\n', '')
+    #             row = row.split('	')
+    #             row.append(file.split('-')[0])
+    #             rows.append(row)
+    # dg = pd.DataFrame(rows, columns=col)
+    source_that_was_here_earlier = 0
+    new_source = 0
+    print(len(df['endUserASN'].unique()))
+    print(len(all_the_leakers))
+    print(len(set(df['endUserASN'].unique())&all_the_leakers))
+    print(len(set(dn['endUserASN'].unique())&all_the_leakers))
+    df = []
+    rows = []
+    for months in ['01', '03', '04', '05']:
+        for file in ['squatasncounts-2021-' + months + '-10-2021-' + months + '-16.txt']:
+            if file.split('.')[-1] == 'txt':
+                file1 = open(path + file, "r")
+                col = file1.readline()
+                col = col.replace('\n', '')
+                # col = col.split('|')[0:6]
+                col = col.strip()
+                print(col)
+                col = col.split('	')
+                col.append('which_data')
+
+                for row in file1.readlines():
+                    # print(row)
+                    if row[0] == '#':
+                        continue
+                    row = row.replace('\n', '')
+                    row = row.split('	')
+                    row.append(file.split('-')[0])
+                    rows.append(row)
+    df = pd.DataFrame(rows, columns=col)
+    # print(len(dn['endUserASN'].unique()))
+    # print(len(df['endUserASN'].unique()))
+    # rows = []
+    # for file in ['tracerouteasncounts-2021-08-10-2021-08-16.txt', 'squatasncounts-2021-08-10-2021-08-16.txt']:
+    #     if file.split('.')[-1] == 'txt':
+    #         file1 = open(path + '/' + file, "r")
+    #         col = file1.readline()
+    #         col = col.replace('\n', '')
+    #         # col = col.split('|')[0:6]
+    #         col = col.strip()
+    #         print(col)
+    #         col = col.split('	')
+    #         col.append('which_data')
+    #
+    #         for row in file1.readlines():
+    #             # print(row)
+    #             if row[0] == '#':
+    #                 continue
+    #             row = row.replace('\n', '')
+    #             row = row.split('	')
+    #             row.append(file.split('-')[0])
+    #             rows.append(row)
+    # dg = pd.DataFrame(rows, columns=col)
+    source_that_was_here_earlier = 0
+    new_source = 0
+    print(len(df['endUserASN'].unique()))
+    print('Squatting')
+    print(len(set(df['endUserASN'].unique())&all_the_leakers))
+
 
 if __name__ == "__main__":
-    heatmap('number of announcements')
-    heatmap('median announcements')
+    are_the_leakers_in_the_source(heatmap('number of announcements'))
+    # heatmap('median announcements')

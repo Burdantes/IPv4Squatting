@@ -188,12 +188,12 @@ def separating_statistics_for_squat_vs_nonsquat(category = '# of Traceroutes'):
 def proportion_of_squatting(final_value):
     ind = np.arange(len(final_value))  # the x locations for the groups
     width = 0.25
-    fig = plt.figure(figsize=(9,6),)
+    fig = plt.figure(figsize=(12,9),)
     # ax = fig.add_axes([0, 0, 1, 1])
     patterns = [ "/" , "+" , "*", "o", "O", ".", "*" ]
     past = [0,0,0,0,0,0,0,0,0]
     # final_value = list(map(list, zip(*final_value)))
-
+    ps = []
     for j in range(0,12):
         frac = j/4
         pat = j%4
@@ -208,7 +208,7 @@ def proportion_of_squatting(final_value):
         val = [a_tuple[j] for a_tuple in final_value]
         print(sum(val))
         print(len(ind),len(val),len(past))
-        plt.bar(ind,val,width,bottom=past,color=color,hatch = patterns[pat])
+        ps.append(plt.bar(ind,val,width,bottom=past,color=color,hatch = patterns[pat]))
         for t in range(0,len(val)):
             past[t] += val[t]
     plt.ylabel('Fraction of squat/non-squat/no measur.',fontsize= 16)
@@ -217,11 +217,16 @@ def proportion_of_squatting(final_value):
     # ax.set_yticks(np.arange(0, 81, 10))
     plt.tick_params(axis='both',labelsize=14)
     #
-    plt.legend(labels=['CDN Squatters', 'Access Squatters','Transit Squatters','Unknown Squatters',
+    # plt.legend(labels=['CDN Squatters', 'Access Squatters','Transit Squatters','Unknown Squatters',
+    #                    'CDN Not Squatters', 'Access Not Squatters','Transit Not Squatters','Unknown Not Squatters',
+    # 'CDN ~ No Measurement', 'Access ~ No Measurement','Transit ~ No Measurement','Unknown ~ No Measurement',
+    #                    ],fontsize='x-large', bbox_to_anchor=(1.05, 1))
+    plt.legend(ps, ('CDN Squatters', 'Access Squatters','Transit Squatters','Unknown Squatters',
                        'CDN Not Squatters', 'Access Not Squatters','Transit Not Squatters','Unknown Not Squatters',
     'CDN ~ No Measurement', 'Access ~ No Measurement','Transit ~ No Measurement','Unknown ~ No Measurement',
-                       ],fontsize='x-large', bbox_to_anchor=(1.05, 1))
-    plt.savefig('figures/Representativity_eyeballs_with_threshold.png', bbox_inches="tight")
+                       ), ncol=3, loc='upper left',
+               bbox_to_anchor=(0, 1.0, 0, 0.21), fontsize='x-large')
+    plt.savefig('figures/Representativity_allocated_with_threshold.pdf', bbox_inches="tight")
     # plt.show()
 
 if __name__ == "__main__":

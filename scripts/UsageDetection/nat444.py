@@ -350,4 +350,4 @@ def detecting_cgnat(path_to_data,output_csv,num_of_edges_required=10):
 if __name__ == "__main__":
     output_csv = '../../results/cgnat_statistics.csv'
     path_to_data = '/Users/geode/Documents/Datasets/Squat/'
-    main(path_to_data,output_csv,output_graph = 'graph/')
+    detecting_cgnat(path_to_data,output_csv)

@@ -57,23 +57,55 @@ def comparing_new_ases_arriving(df):
     df_before = df[~df['Date'].isin(month_after_the_announcements)]
     df_after = df[df['Date'].isin(month_after_the_announcements)]
     print(df_after.shape,df_before.shape)
-    squatting_ASes_after = df_after['squat_org'].value_counts().index
-    squatting_ASes_before = df_before['squat_org'].value_counts().index
-    print('Org that are still here afterwards', len(set(squatting_ASes_before).intersection(set(squatting_ASes_after))))
-    print('Org that appear only afterwards', len(set(squatting_ASes_after)-(set(squatting_ASes_before))))
-    print('Org that appear only beforehand', len(set(squatting_ASes_before)-(set(squatting_ASes_after))))
-    with open('../../result/CaseStudy/ases_squatting_only_after.txt', 'w') as f:
-        for ases in list(set(squatting_ASes_after)-(set(squatting_ASes_before))):
+    squatting_org_after = df_after['squat_org'].value_counts().index
+    squatting_org_before = df_before['squat_org'].value_counts().index
+    squatting_ASes_after = df_after['squat_asn'].value_counts().index
+    squatting_ASes_before = df_before['squat_asn'].value_counts().index
+    squatting_ASes_after_only = list(set(squatting_ASes_after)-(set(squatting_ASes_before)))
+    print('Org that are still here afterwards', len(set(squatting_org_before).intersection(set(squatting_org_after))))
+    print('Org that appear only afterwards', len(set(squatting_org_after)-(set(squatting_org_before))))
+    print('Org that appear only beforehand', len(set(squatting_org_before)-(set(squatting_org_after))))
+    with open('../../result/CaseStudy/org_squatting_only_after.txt', 'w') as f:
+        for ases in list(set(squatting_org_after)-(set(squatting_org_before))):
             print(ases, file=f)
-    with open('../../result/CaseStudy/ases_squatting_DoD_after.txt', 'w') as f:
-        for ases in list(squatting_ASes_after):
+    with open('../../result/CaseStudy/org_squatting_DoD_after.txt', 'w') as f:
+        for ases in list(squatting_org_after):
             print(ases, file=f)
-    df['squat_asn']= df['squat_asn'].astype(str)
-    df['src_asn'] = df['src_asn'].astype(str)
     print(df[df.squat_asn == df.src_asn].shape)
     print(df.shape)
     dg = df[df.squat_asn!= df.src_asn]
     print(dg.shape)
+    rows = []
+    for months in ['01']:
+        for file in ['count_statistics/tracerouteasncounts-2021-' + months + '-10-2021-' + months + '-16.txt']:
+            if file.split('.')[-1] == 'txt':
+                file1 = open(file, "r")
+                col = file1.readline()
+                col = col.replace('\n', '')
+                # col = col.split('|')[0:6]
+                col = col.strip()
+                print(col)
+                col = col.split('	')
+                col.append('which_data')
+
+                for row in file1.readlines():
+                    # print(row)
+                    if row[0] == '#':
+                        continue
+                    row = row.replace('\n', '')
+                    row = row.split('	')
+                    row.append(file.split('-')[0])
+                    rows.append(row)
+    counts = 0
+    df = pd.DataFrame(rows, columns=col)
+    print(df)
+    for ases in squatting_ASes_after_only:
+        print(ases,df[df['endUserASN'] == str(ases)])
+        if str(ases) in df['endUserASN'].values:
+            dm = df[df['endUserASN'] == str(ases)]
+            if int(dm['#Field:count'].values[0]) > 5000:
+                counts += 1
+    print('Fraction of ASes that were seen beforehand', float(counts)/len(squatting_ASes_after_only))
 
 def attribute_usage(df):
     l = defaultdict(lambda : [])
@@ -139,86 +171,108 @@ def parsing_data(directory):
     # rows = set()
     not_mapped = 0
     temp_file = 'temp/processed-temp-file.txt'
-
-    out_file = open(temp_file, 'w')  # use this to store intermediate results to disk
-    list_of_elem = os.listdir(directory)
-    list_of_elem.append('../Ark-Attribution-2021-01-01.txt')
-    print(list_of_elem)
-    for file in list_of_elem:
-        print(file)
-        # if file.split('-')[0] != '../Ark' and file.split('-')[0] != 'RIPE' and file.split('-')[3]!='11':
-        #     continue
-        # making sure that the file is a txt file
-        if file.endswith('.txt'):
+    if not(temp_file.split('/')[1] in os.listdir('temp/')):
+        out_file = open(temp_file, 'w')  # use this to store intermediate results to disk
+        list_of_elem = os.listdir(directory)
+        list_of_elem.append('../Ark-Attribution-2021-01-01.txt')
+        print(list_of_elem)
+        for file in list_of_elem:
+            print(file)
+            # if file.split('-')[0] != '../Ark' and file.split('-')[0] != 'RIPE' and file.split('-')[3]!='11':
             #     continue
-            # if file.split('-')[-2] != month_to_be_selected:
-            #     continue
-            with open(directory + '/' + file, "r+") as txt_mapped:
-
-                ### reading the first row and manually adding the right columns
-                col = next(txt_mapped)  # txt_mapped.readline()
-                col = col.replace('\n', '')
-                # col = col.split('|')[0:6]
-                col = col.split('|')
-                col = col[0:7]
-                print(col)
-                # if file.startswith('../Ark'):
-                #     col = col[0:-1]
-                subdate = file.split('.')[0]
-                date = ("-").join(subdate.split('-')[2:5])
-                # if int(date.split('-')[0]) == 2021 and int(date.split('-')[1]) == 1:
-                #     col.append('Prefix')
-                col.append('Prefix')
-                col.append('Date')
-                col.append('Data Source')
-                print(file)
-
-                data_source = file.split('-')[0]
-                print(data_source)
-                print(col)
-                for line in txt_mapped:
-                    if line.startswith('#'):
-                        continue
-                    # read in buffered number of lines as a time
-                    line = line.strip()
-                    # row = tqdm(line)  # !! apply whatever logic tqdm was doing on a per line basis !!
-                    row = line
-                    if row[-2] == '*' and row[-3] == '*':
-                        not_mapped += 1
-                        continue
-
-                    # data cleaning stuff
-                    row = row.replace('\n', '')
-                    row = row.split('|')
-                    # row = row[0:7]
-                    if file.startswith('../Ark'):
-                        if row[-1] == 'standard':
-                            row = row[0:-1]
-                        else:
+            # making sure that the file is a txt file
+            if file.endswith('.txt'):
+                #     continue
+                # if file.split('-')[-2] != month_to_be_selected:
+                #     continue
+                with open(directory + '/' + file, "r+") as txt_mapped:
+    
+                    ### reading the first row and manually adding the right columns
+                    col = next(txt_mapped)  # txt_mapped.readline()
+                    col = col.replace('\n', '')
+                    # col = col.split('|')[0:6]
+                    col = col.split('|')
+                    col = col[0:7]
+                    print(col)
+                    # if file.startswith('../Ark'):
+                    #     col = col[0:-1]
+                    subdate = file.split('.')[0]
+                    date = ("-").join(subdate.split('-')[2:5])
+                    # if int(date.split('-')[0]) == 2021 and int(date.split('-')[1]) == 1:
+                    #     col.append('Prefix')
+                    col.append('Prefix')
+                    col.append('Date')
+                    col.append('Data Source')
+                    print(file)
+    
+                    data_source = file.split('-')[0]
+                    print(data_source)
+                    print(col)
+                    for line in txt_mapped:
+                        if line.startswith('#'):
                             continue
-                    if data_source == '../Ark':
-                        data_source = 'Ark'
-                    elif data_source == 'squatspace':
-                        data_source = 'Microsoft'
-                    row = row[0:7]
-                    row_prefix = row[2].split('.')[0] + '.0.0.0/8'
-                    row.append(row_prefix)
-                    row.append(date)
-                    row.append(data_source)
-                    # if len(row) != len(col):
-
-                    row = row[0:10]
-                    out_str = '|'.join(row)
-                    out_file.write(out_str)
-                    out_file.write('\n')
-
-    out_file.close()
-
+                        # read in buffered number of lines as a time
+                        line = line.strip()
+                        # row = tqdm(line)  # !! apply whatever logic tqdm was doing on a per line basis !!
+                        row = line
+                        if row[-2] == '*' and row[-3] == '*':
+                            not_mapped += 1
+                            continue
+    
+                        # data cleaning stuff
+                        row = row.replace('\n', '')
+                        row = row.split('|')
+                        # row = row[0:7]
+                        if file.startswith('../Ark'):
+                            if row[-1] == 'standard':
+                                row = row[0:-1]
+                            else:
+                                continue
+                        if data_source == '../Ark':
+                            data_source = 'Ark'
+                        elif data_source == 'squatspace':
+                            data_source = 'Microsoft'
+                        row = row[0:7]
+                        row_prefix = row[2].split('.')[0] + '.0.0.0/8'
+                        row.append(row_prefix)
+                        row.append(date)
+                        row.append(data_source)
+                        # if len(row) != len(col):
+    
+                        row = row[0:10]
+                        out_str = '|'.join(row)
+                        out_file.write(out_str)
+                        out_file.write('\n')
+        out_file.close()
+    else:
+        list_of_elem = os.listdir(directory)
+        for file in list_of_elem:
+            if file.endswith('.txt'):
+                #     continue
+                # if file.split('-')[-2] != month_to_be_selected:
+                #     continue
+                with open(directory + '/' + file, "r+") as txt_mapped:
+                    ### reading the first row and manually adding the right columns
+                    col = next(txt_mapped)  # txt_mapped.readline()
+                    col = col.replace('\n', '')
+                    # col = col.split('|')[0:6]
+                    col = col.split('|')
+                    col = col[0:7]
+                    print(col)
+                    # if file.startswith('../Ark'):
+                    #     col = col[0:-1]
+                    subdate = file.split('.')[0]
+                    date = ("-").join(subdate.split('-')[2:5])
+                    # if int(date.split('-')[0]) == 2021 and int(date.split('-')[1]) == 1:
+                    #     col.append('Prefix')
+                    col.append('Prefix')
+                    col.append('Date')
+                    col.append('Data Source')
+            break
     start = time.process_time()
     # df = pd.DataFrame(list(rows),columns=col)
     print(col)
-    print(row)
-    df = pd.read_csv(temp_file, sep='|')
+    df = pd.read_csv(temp_file,header=None,sep='|')
     # read_csv is really fast
     df.columns = col
     print('Processing Time', time.process_time() - start)
@@ -344,7 +398,7 @@ def generating_venn_diagram(df):
     print(val_all)
     venn3(subsets = (val1, val3, val4, val2, val5, val6, val7), set_labels = ('March', 'April', 'May'), alpha = 0.5)
     c = venn3_circles(subsets = (val1, val3, val4, val2, val5, val6, val7), linewidth=2, color='black')
-    plt.savefig('../results/venndiagram.pdf')
+    plt.savefig('../../results/venndiagram.pdf')
 
 if __name__ == '__main__':
     # Generating the Dataframe with the observed squatters
@@ -510,41 +564,40 @@ if __name__ == '__main__':
 # #     print(percentage)
 # # # print(sum(list(dic_diff.values())))
 # # #####
-#     AS_level_metainfos = pd.read_pickle('/Users/geode/Downloads/faciliies_mapping-master/ML_experimentation/resulting_graph_May2021.pickle')
-#     # for s in df['squat_asn'].value_counts().index:
-#     #     if s != '*':
-#     dg_squat = df['squat_asn'].value_counts()
-#     squatting_test  = {}
-#     # file1 =  open('../data/jiangchen_output.txt','r')
-#     list_of_ASes_arkipelago= []
-#     # for i in union_org():
-#     #     i = i.replace('\n','')
-#     #     l = i.split(' ')[1:]
-#     #     list_of_ASes_arkipelago.extend(l)
-#     for ind,s in zip(AS_level_metainfos.index,AS_level_metainfos['asNumber']):
-#         if s in union_org():
-#             squatting_test[ind] = 'Squatting'
-#         elif s in list_of_ASes_arkipelago:
-#             squatting_test[ind] = 'Arkipelago Squatting'
-#         else:
-#             squatting_test[ind] = 'Non Squatting'
-#     AS_level_metainfos['Squatters'] = pd.Series(squatting_test)
-#     AS_level_metainfos = AS_level_metainfos.fillna(0)
-#     AS_level_metainfos = AS_level_metainfos.sort_values(by=['ASCone'],ascending=False)
-#     corr = AS_level_metainfos.corr()
-#     # AS_level_metainfos = AS_level_metainfos[AS_level_metainfos.index.isin(AS_level_metainfos.index[0:250])]
-#     print(AS_level_metainfos['Squatters'].value_counts())
-#     # print(correlation_ratio(AS_level_metainfos['Squatters'],AS_level_metainfos['Eyeballs']))
-#     df_metainfos =AS_level_metainfos[AS_level_metainfos.asNumber.isin(df['squat_asn'].value_counts().index)][['Eyeballs','Rank','lenPref','ASType','asName','Country','asNumber','ASCone']]
-#     df_metainfos.columns = ['Eyeballs','Rank','Number of Prefix Announced','AS Type','AS Name','Country','AS Number',"CustomerCones"]
-#     print(df_metainfos.index)
-#     df_metainfos.index = df_metainfos['AS Number']
-#     # df_metainfos['Count'] = pd.Series(dict(dg_squat[dg_squat.index.isin(df_metainfos.index)]))
-#     import seaborn as sns
-#     df_metainfos['Eyeballs'] = df_metainfos['Eyeballs'].astype(float)
-#     df_metainfos['Eyeballs'] = df_metainfos['Eyeballs'].apply(lambda x: np.log10(x+1))
-#     df_metainfos['Rank'] = df_metainfos['Rank'].astype(float)
-#     df_metainfos.to_csv('../results/Dod_squatters_June_filters.csv')
+    AS_level_metainfos = pd.read_pickle('../../data/BGP/resulting_graph_May2021.pickle')
+    # for s in df['squat_asn'].value_counts().index:
+    #     if s != '*':
+    dg_squat = df['squat_asn'].value_counts()
+    squatting_test  = {}
+    # file1 =  open('../data/jiangchen_output.txt','r')
+    list_of_ASes_arkipelago= []
+    # for i in union_org():
+    #     i = i.replace('\n','')
+    #     l = i.split(' ')[1:]
+    #     list_of_ASes_arkipelago.extend(l)
+    for ind,s in zip(AS_level_metainfos.index,AS_level_metainfos['asNumber']):
+        if s in union_org():
+            squatting_test[ind] = 'Squatting'
+        elif s in list_of_ASes_arkipelago:
+            squatting_test[ind] = 'Arkipelago Squatting'
+        else:
+            squatting_test[ind] = 'Non Squatting'
+    AS_level_metainfos['Squatters'] = pd.Series(squatting_test)
+    AS_level_metainfos = AS_level_metainfos.fillna(0)
+    AS_level_metainfos = AS_level_metainfos.sort_values(by=['ASCone'],ascending=False)
+    corr = AS_level_metainfos.corr()
+    # AS_level_metainfos = AS_level_metainfos[AS_level_metainfos.index.isin(AS_level_metainfos.index[0:250])]
+    print(AS_level_metainfos['Squatters'].value_counts())
+    # print(correlation_ratio(AS_level_metainfos['Squatters'],AS_level_metainfos['Eyeballs']))
+    df_metainfos =AS_level_metainfos[AS_level_metainfos.asNumber.isin(df['squat_asn'].value_counts().index)][['Eyeballs','Rank','lenPref','ASType','asName','Country','asNumber','ASCone']]
+    df_metainfos.columns = ['Eyeballs','Rank','Number of Prefix Announced','AS Type','AS Name','Country','AS Number',"CustomerCones"]
+    print(df_metainfos.index)
+    df_metainfos.index = df_metainfos['AS Number']
+    # df_metainfos['Count'] = pd.Series(dict(dg_squat[dg_squat.index.isin(df_metainfos.index)]))
+    import seaborn as sns
+    df_metainfos['Eyeballs'] = df_metainfos['Eyeballs'].astype(float)
+    df_metainfos['Rank'] = df_metainfos['Rank'].astype(float)
+    df_metainfos.to_csv('../../results/squatters_metainfo.csv')
 #     corr = df_metainfos.corr()
 #     print(corr)
 #     model2 = ols("Count ~ Eyeballs+CustomerCones", data=df_metainfos).fit()

@@ -110,16 +110,18 @@ print(kmeans.cluster_centers_)
 centroids  = kmeans.cluster_centers_
 # centroid_labels = [centroids[i] for i in kmeans.labels_]
 # print(centroid_labels)
-for elem in centroids:
-    print(elem[[0,2,-6,-5]])
+for i,elem in enumerate(centroids):
+    print(i,dict(zip(['# of Connected Components','Tree Depth','Number of Sinks','Max Distance to the CGNAT candidate','# of Edges','Median RTT','25 RTT','75 RTT','Median hop','25 hop', '75 hop','Number of Prefixes',],elem)))
+    # print(elem[[0,2,-6,-5]])
 list_of_cgnat_addresses = {}
-# updated_label = {0:'Large CPE',1:'Large CGNAT',2:'CPE NATs', 3:'CPE NATs',4:"Medium CGNAT",5:'Unknown'}
-# updated_label = {0: "Small CPE",1:"Medium CGNAT",2:"Large CPE", 3: "Medium CPE", 4:"Medium CGNAT",5:'Large CPE',6:'Medium CPE',7:'Medium CGNAT',8:'Large CGNAT',9:'Small CPE',10:'Medium CGNAT',11:'Large CPE',12:'Small CPE',13:'Medium CPE'}
-updated_label = {0:'Large CGNAT',1:'Small CPE',2:'Small CPE',3:'Medium CGNAT',4:'Ambiguous CPE/CGNAT',5:'Large CGNAT',6:'Large CGNAT',7:'Large CPE',8:'Large CGNAT'}
+updated_label = {0:'Large CGNAT',1:'Small CPE',2:'Small CPE',3:'Medium CGNAT',4:'Large CPE',5:'Large CGNAT',6:'Large CGNAT',7:'Large CPE',8:'Large CGNAT'}
+updated_label = {0:'Small NAT444',1:'Small NAT44',2:'Small NAT44',3:'Large NAT44',4:'Large NAT44',5:'Large NAT444',6:'Large NAT444',7:'Large NAT44',8:'Large NAT444'}
+
 label = []
 for i in kmeans.labels_:
     label.append(updated_label[i])
 df['Labels'] = label
+df.to_csv('../../result/labels_prefixes_nat444.csv')
 for s,t in zip(df['Source Prefix'],df['Labels']):
     if 'CGNAT' in t:
         list_of_cgnat_addresses[s] = t

@@ -8,9 +8,9 @@ from datetime import date
 
 burstiness_legitimate = []
 burstiness_illegitimate = []
-df = pd.read_csv('../data/history_ripe_complete.csv', index_col=0)
+df = pd.read_csv('../../data/history_ripe_complete.csv', index_col=0)
 def reading_legitimate_actors():
-    file = open('../meta-information/legitimate_ASes.txt', 'r')
+    file = open('../../data/MetaInformation/legitimate_ASes.txt', 'r')
     legitimate_actors = {}
     for row in file.readlines():
         print(row)
@@ -69,5 +69,5 @@ plt.plot(x, y,label='Illegitimate')
 plt.plot(x_prime,y_prime,label='Legitimate')
 plt.legend()
 plt.show()
-# plt.savefig('results/burstiness_of_announcements.pdf')
+plt.savefig('../../result/BGPdata/burstiness_of_announcements.pdf')
 print(N,N_prime)
