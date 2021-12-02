@@ -4,6 +4,7 @@ PepsiCo, Inc.
 PepsiCo International
 Hitachi,Ltd., Cloud services Division
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Rogers Communications Canada Inc.
 Proximus NV
 Telstra Corporation
@@ -722,6 +723,8 @@ AARNet
 LUXNETWORK S.A.
 Guyana Telephone & Telegraph Co.
 =======
+=======
+>>>>>>> Stashed changes
 GlaxoSmithKline
 Alibaba (US) Technology Co., Ltd.
 Rogers Communications Canada Inc.
@@ -2547,4 +2550,7 @@ IP TELECOM E SISTEMAS LTDA
 Cable Tica
 DELTA ONLINE spol. s r.o.
 Etihad Atheeb Telecom Company
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

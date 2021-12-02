@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <list default="true" id="cc470459-00f4-4f18-bb02-7c3ba0229f4a" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/scripts/Statistics/worldheatmap.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/scripts/UsageDetection/counting_traceroutes.py" afterDir="false" />
@@ -26,11 +27,15 @@
 =======
     <list default="true" id="cc470459-00f4-4f18-bb02-7c3ba0229f4a" name="Changes" comment="" />
 >>>>>>> Stashed changes
+=======
+    <list default="true" id="cc470459-00f4-4f18-bb02-7c3ba0229f4a" name="Changes" comment="" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,6 +44,8 @@
       </list>
     </option>
   </component>
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   <component name="Git.Settings">
@@ -67,7 +74,11 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/result" />
+>>>>>>> Stashed changes
 =======
     <property name="last_opened_file_path" value="$PROJECT_DIR$/result" />
 >>>>>>> Stashed changes
@@ -82,8 +93,13 @@
     </key>
   </component>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <component name="RunManager" selected="Python.counting_traceroutes">
     <configuration name="analyzingclients" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+  <component name="RunManager" selected="Python.Measurements">
+    <configuration name="Measurements" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> Stashed changes
 =======
   <component name="RunManager" selected="Python.Measurements">
     <configuration name="Measurements" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -95,7 +111,11 @@
       </envs>
       <option name="SDK_HOME" value="/usr/local/opt/python@3.9/bin/python3" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/Statistics" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/CaseStudy" />
+>>>>>>> Stashed changes
 =======
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/CaseStudy" />
 >>>>>>> Stashed changes
@@ -105,7 +125,11 @@
       <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/Statistics/analyzingclients.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/CaseStudy/Measurements.py" />
+>>>>>>> Stashed changes
 =======
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/CaseStudy/Measurements.py" />
 >>>>>>> Stashed changes
@@ -118,7 +142,11 @@
       <method v="2" />
     </configuration>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <configuration name="counting_traceroutes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="Parser" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> Stashed changes
 =======
     <configuration name="Parser" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
 >>>>>>> Stashed changes
@@ -129,7 +157,11 @@
       </envs>
       <option name="SDK_HOME" value="/usr/local/opt/python@3.9/bin/python3" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/UsageDetection" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/Statistics" />
+>>>>>>> Stashed changes
 =======
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/Statistics" />
 >>>>>>> Stashed changes
@@ -139,7 +171,11 @@
       <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/UsageDetection/counting_traceroutes.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/Statistics/Parser.py" />
+>>>>>>> Stashed changes
 =======
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/Statistics/Parser.py" />
 >>>>>>> Stashed changes
@@ -152,7 +188,11 @@
       <method v="2" />
     </configuration>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <configuration name="kmeanNAT444" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="Parsing_Speedchecker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> Stashed changes
 =======
     <configuration name="Parsing_Speedchecker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
 >>>>>>> Stashed changes
@@ -163,7 +203,11 @@
       </envs>
       <option name="SDK_HOME" value="/usr/local/opt/python@3.9/bin/python3" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/UsageDetection" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/CaseStudy" />
+>>>>>>> Stashed changes
 =======
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/CaseStudy" />
 >>>>>>> Stashed changes
@@ -173,7 +217,11 @@
       <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/UsageDetection/kmeanNAT444.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/CaseStudy/Parsing_Speedchecker.py" />
+>>>>>>> Stashed changes
 =======
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/CaseStudy/Parsing_Speedchecker.py" />
 >>>>>>> Stashed changes
@@ -186,7 +234,11 @@
       <method v="2" />
     </configuration>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <configuration name="nat444" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="kmeanNAT444" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> Stashed changes
 =======
     <configuration name="kmeanNAT444" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
 >>>>>>> Stashed changes
@@ -203,7 +255,11 @@
       <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/UsageDetection/nat444.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/UsageDetection/kmeanNAT444.py" />
+>>>>>>> Stashed changes
 =======
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/UsageDetection/kmeanNAT444.py" />
 >>>>>>> Stashed changes
@@ -216,7 +272,11 @@
       <method v="2" />
     </configuration>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <configuration name="org_squat_usage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="statisticsfiltering" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> Stashed changes
 =======
     <configuration name="statisticsfiltering" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
 >>>>>>> Stashed changes
@@ -227,7 +287,11 @@
       </envs>
       <option name="SDK_HOME" value="/usr/local/opt/python@3.9/bin/python3" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/UsageDetection" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/Statistics" />
+>>>>>>> Stashed changes
 =======
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/Statistics" />
 >>>>>>> Stashed changes
@@ -237,7 +301,11 @@
       <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/UsageDetection/org_squat_usage.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/Statistics/statisticsfiltering.py" />
+>>>>>>> Stashed changes
 =======
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/Statistics/statisticsfiltering.py" />
 >>>>>>> Stashed changes
@@ -250,6 +318,7 @@
       <method v="2" />
     </configuration>
     <list>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       <item itemvalue="Python.org_squat_usage" />
       <item itemvalue="Python.analyzingclients" />
@@ -265,6 +334,8 @@
         <item itemvalue="Python.analyzingclients" />
         <item itemvalue="Python.org_squat_usage" />
 =======
+=======
+>>>>>>> Stashed changes
       <item itemvalue="Python.Measurements" />
       <item itemvalue="Python.statisticsfiltering" />
       <item itemvalue="Python.kmeanNAT444" />
@@ -278,6 +349,9 @@
         <item itemvalue="Python.Parser" />
         <item itemvalue="Python.Parsing_Speedchecker" />
         <item itemvalue="Python.statisticsfiltering" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       </list>
     </recent_temporary>
@@ -293,8 +367,12 @@
       <workItem from="1638283655585" duration="463000" />
       <workItem from="1638284156674" duration="470000" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <workItem from="1638284824380" duration="58796000" />
       <workItem from="1638394675647" duration="20654000" />
+=======
+      <workItem from="1638284824380" duration="57431000" />
+>>>>>>> Stashed changes
 =======
       <workItem from="1638284824380" duration="57431000" />
 >>>>>>> Stashed changes
@@ -360,6 +438,7 @@
           <option name="timeStamp" value="39" />
         </line-breakpoint>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/scripts/CaseStudy/Measurements.py</url>
           <line>275</line>
@@ -377,6 +456,8 @@
         </line-breakpoint>
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -384,6 +465,7 @@
     <SUITE FILE_PATH="coverage/squat$visualization_squat_space.coverage" NAME="visualization_squat_space Coverage Results" MODIFIED="1638330852881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/SquatHistory" />
     <SUITE FILE_PATH="coverage/squat$CDFhopposition.coverage" NAME="CDFhopposition Coverage Results" MODIFIED="1638370323192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/Statistics" />
     <SUITE FILE_PATH="coverage/squat$churn_of_squatters.coverage" NAME="churn_of_squatters Coverage Results" MODIFIED="1638377824429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/CaseStudy" />
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <SUITE FILE_PATH="coverage/squat$visual_announcements.coverage" NAME="visual_announcements Coverage Results" MODIFIED="1638411993480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/BGPanalysis" />
     <SUITE FILE_PATH="coverage/squat$Parsing_Speedchecker.coverage" NAME="Parsing_Speedchecker Coverage Results" MODIFIED="1638389584550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/CaseStudy" />
@@ -402,6 +484,8 @@
     <SUITE FILE_PATH="coverage/squat$statisticsfiltering.coverage" NAME="statisticsfiltering Coverage Results" MODIFIED="1638381957464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/Statistics" />
     <SUITE FILE_PATH="coverage/squat$Measurements.coverage" NAME="Measurements Coverage Results" MODIFIED="1638393038407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/CaseStudy" />
 =======
+=======
+>>>>>>> Stashed changes
     <SUITE FILE_PATH="coverage/squat$visual_announcements.coverage" NAME="visual_announcements Coverage Results" MODIFIED="1638376758668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/BGPanalysis" />
     <SUITE FILE_PATH="coverage/squat$Parsing_Speedchecker.coverage" NAME="Parsing_Speedchecker Coverage Results" MODIFIED="1638389584550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/CaseStudy" />
     <SUITE FILE_PATH="coverage/squat$Statistics_of_filtering.coverage" NAME="statisticsfiltering Coverage Results" MODIFIED="1638370352517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/Statistics" />
@@ -414,6 +498,9 @@
     <SUITE FILE_PATH="coverage/squat$Parser.coverage" NAME="Parser Coverage Results" MODIFIED="1638391701518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/Statistics" />
     <SUITE FILE_PATH="coverage/squat$statisticsfiltering.coverage" NAME="statisticsfiltering Coverage Results" MODIFIED="1638381957464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/Statistics" />
     <SUITE FILE_PATH="coverage/squat$Measurements.coverage" NAME="Measurements Coverage Results" MODIFIED="1638391591433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/CaseStudy" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     <SUITE FILE_PATH="coverage/squat$DoD_announcements.coverage" NAME="DoD_announcements Coverage Results" MODIFIED="1638373411851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/BGPanalysis" />
     <SUITE FILE_PATH="coverage/squat$RIPE_history.coverage" NAME="RIPE_history Coverage Results" MODIFIED="1638373932038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/BGPCode" />

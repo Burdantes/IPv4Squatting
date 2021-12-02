@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Cats-Net Limited
 PT. Infotama Lintas Global
 Boom Info Tech (SMC-Pvt) Ltd
@@ -598,3 +599,605 @@ PRIME BANK LIMITED
 Spider Net Ltd
 Ministerio del Interior y de Seguridad Publica - Gobierno de Chile
 Liberty Cablevision of Puerto Rico
+=======
+INTERNET HARBOUR INTERNATIONAL CO.LIMITED
+PT INDONESIA TRANS NETWORK
+KSI System Sp. z o.o.
+DATASYS - edoma.net s.r.o.
+RT NICOLAU TELECOMUNICAÇÃO - ME
+NUBICOM S.R.L.
+PLUGAR TELECOM
+HLP MOBILE AND WORLDWIDE TRACKING
+CJONLINE ISP India
+Anik Computer & Networking
+TTNET s.r.o.
+Atlantic Telephone Membership Corp.
+VOU COMUNICAÇÕES LTDA
+Multimedia Polska Sp. z o.o.
+Empresa Provincial de Energia de Cordoba
+CH Sistemas Videla S.R.L.
+FIBERNET TV SAS
+The University of Alabama
+Novartis AG
+Netstra Communications Pvt Ltd
+CV Atha Media Prima
+Kurlec Wireless (PTY) Ltd
+SPEEDNET LTDA EPP
+Daulatpur Online
+WakeMed
+PT. Total Info Kharisma
+Telenor Pakistan (Pvt) Ltd
+AGORA CALYCE SpAS
+Columbus Networks de Honduras S. de R.L.
+Orange Romania S.A.
+Colvir-Rus OOO
+Websurfer Nepal Communication System Pvt. Ltd
+Jamii Telecommunications Limited
+IMS Health India Pvt Ltd
+Interworks Wireless Solutions
+BR Automacao e Consultoria Ltda
+Dctech Micro Services
+BRETAGNE TELECOM SAS
+Speedcast Communications, Inc
+Tiscali Italia S.P.A.
+Hondutel
+Gatik Business Solutions
+Beanfield Technologies Inc.
+IBOSS Inc.
+REDE TELENEW EIRELI - ME
+IFX Networks Venezuela C.A.
+TELEINFOR COMERCIO E SERVIÇO LTDA-ME
+Etisalat Afghan
+MAX NET FOR INTERNET SERVICES
+Levikom Eesti OU
+National Mobile Telecommunications Company
+NipBr - NipCable do Brasil Telecom LTDA
+Sylhet-Net Broadband
+Omnicare, Inc.
+PT SOLUSI TRIMEGAH PERSADA
+PT. Mahameru Media Nusantara
+General Services Commission
+Minh Tu Telecom Limited Company
+Mazeda Networks Limited
+ADN Telecom Ltd.
+Grupalia Internet S.A.
+AL-SARD FIBER Co. for Internet Fiber and Optical Cable Services /Ltd.
+acens Technologies, S.L.
+XMission, L.C.
+TECNOLOGIA BANCARIA S/A
+Endeavor Communications
+NETSCOPE
+InfoWest, Inc.
+FIBERTEL PERU S.A.
+Sejong Telecom
+HANWHA Corp. Information Service div.
+PT Orbit Eka Semesta
+ORBI TELECOM
+TogoTelecom, Togo
+California Technology Agency
+Managed Network Solutions, Inc.
+Exatel S.A.
+ISP SOLUTIONS S.A.
+Blizzard Entertainment, Inc
+Gigafiber Internet Private Limited
+Sony Pictures Entertainment Inc
+Surfnet B.V.
+Security Firewall Ltd
+G4 Ltda
+LightEdge Solutions
+RADIUS TELECOMS, INC.
+MITSUI & CO., LTD.
+Dronagiri Infotech Pvt Ltd
+Rech e Bernardi LTDA ME
+BAE Systems Applied Intelligence US Corp.
+Netplus Broadband Services Private Limited
+Ministerio del Interior y de Seguridad Publica - Gobierno de Chile
+PODA a.s.
+MYANMAR INFORMATION HIGHWAY LIMITED
+Televisao Cidade S/A
+Metalink Technologies, Inc.
+WMS s.r.o.
+NTT America, Inc.
+Yatanarpon Teleport Company Limited
+Heidelberg IT Management GmbH & Co.KG
+THE INFINITY BROADBAND (PVT) LIMITED
+Liberty Cablevision of Puerto Rico
+WETUBE NETWORK
+Net Tech Ltd
+GIGABIT S.A.L
+CABO SERVICOS DE TELECOMUNICACOES LTDA
+BUNGE ALIMENTOS S/A
+MTN Uganda
+NCS Pearson Inc.
+Nationwide Children's Hospital
+CGI Sverige AB
+IHS Global, Inc.
+Bell AG
+DoD Network Information Center
+Ferguson Enterprises, Inc.
+BD Networks
+Fastenal Company
+SERVICABLE S.A. DE C.V.
+Drustvo za telekomunikacije "MTEL" DOO
+Ejmnet Tecnologia ltda
+Cegeka NV
+K2 Telecom e Multimidia LTDA ME
+AT&T Labs, Inc.
+IP-Only Networks AB
+State of Nevada
+BISSOLOTTI & BISSOLOTTI LTDA
+Candor infosolution Pvt Ltd
+COOPERATIVA COLONIZADORA MULTIACTIVA FERNHEIM LTDA
+South Central Communications, Inc.
+Buckeye Cablevision, Inc.
+AT Broadband Pvt Ltd
+PT. Infotama Lintas Global
+IDC TELECOM LTDA
+Webstorm (Pty) LTD
+Lalat Internet Service Pvt Ltd
+LinkChina Telecom Global Limited.
+Cronomagic Canada Inc.
+PT MEDIA MANAKARRA NET
+Qualcomm, Inc.
+Vianet
+J. Walter Thompson
+Skynet
+PURtel.com GmbH
+STACKS INC
+State of Tennessee
+Telitec Connections S.L.
+3S S.A.
+Forcepoint Cloud Ltd
+PT. DIGITAL NETWORK SETIAWAN
+The Prudential Insurance Company of America
+IWserver Internet Banda Larga Ltda.
+DCTV Cable Network & Broadband Services Inc.
+Netnam Company
+Petroluem Development Oman LLC
+s IT Solutions AT Spardat GmbH
+Getlinks (SMC-Private) Limited
+SG.GS
+Horizon Telecom B.V.
+Royal Cablevision Corp.
+NEOGRID DATACENTER SA
+NOVA TELECOM LTDA
+Alhambra Systems SA
+Level 7 Wireless (Pty) Ltd
+Fluency Communications Ltd
+National Institute of Informatics
+NEXTRA TELESERVICES PVT. LTD.
+Fayetteville Public Utilities
+Kom lan Ltd
+WellNetworks (Private) Limited
+Red Nacional Académica de Tecnología Avanzada - RENATA
+TELEMAC TELECOMUNICACOES LTDA
+STORMmedia sp. z o.o.
+Cynox-IT Limited
+Virtual Internet
+Joint Stock Company TransTeleCom
+AGENCIA PARA LA ADMINITRACION DIGITAL DE LA COMUNIDAD DE MADRID
+PT Sandya Sistem Indonesia
+R-KOM Regensburger Telekommunikationsverwaltungsgesellschaft mbH trading as R-KOM Telekommunikationsgesellschaft mbH & Co. KG
+Everywhere Wireless, LLC
+UGMK-Telecom LLC
+its communications Inc.
+Philippine Telelgraph & Telephone
+REDE DE TELECOMUNICAÇÕES CARAJAS LTDA
+Interkonekt Pawel Barczyk, Tomasz Furman Sp.J.
+X-DSL Networking Solutions
+PT Global Teknologi Teraindo
+Pogliotti & Pogliotti Construcciones S.A.
+Network Zone Solution Provider Ltd
+BANK DEGROOF PETERCAM SA
+SAP Asia Pte Ltd
+Banco BMG S.A.
+BTcom Infocommunications Ltd.
+RELX inc.
+Servicios y Telecomunicaciones S.A.
+Serverius Holding B.V.
+Magellan Health Services
+INTERLIG TELECOM
+Fluor Enterprises, Inc.
+PT. GEMILANG SARANA MANDIRI
+THE INTERPUBLIC GROUP OF COMPANIES, INC.
+F2X Operator B.V.
+Natel Telecom Ltda. - ME
+Silva & Silveira Provedor de Internet Ltda
+Cablevision Red, S.A de C.V.
+Karib Cable
+Uganda Telecom
+Claro S/A
+CBRE Pty Limited
+Xnet Internet Services (Pty) Ltd
+PT Dinar Wahana Gemilang
+Buhler AG
+Kyivstar PJSC
+DEBACOM Sp. z o.o.
+Axiom Networks Ltd
+City of Calgary
+McAfee Germany GmbH
+Host Africa (Pty) Ltd
+Cats-Net Limited
+IOMART CLOUD SERVICES LIMITED
+B.K.B Network
+Tele2 Sverige AB
+Blue Sky Telecom LTD
+Telefiber AS
+Shadhinota Net
+Broadband Plus S.a.l.
+Mdc Datacenter S.L.
+PT Ring Media Nusantara
+CAMAQUANET SERVICO DE COMUNICACAO MULTIMIDIA EIREL
+Piccinin Computadores e Telefonia Ltda
+Enbridge Pipelines Inc.
+PT Herza Digital Indonesia
+Enmax Envision Inc.
+Loxley Wireless Public Company Limited
+RadioMovil Dipsa, S.A. de C.V.
+Skyvision Guinee SA
+PT. FOXLINE MEDIADATA INDONUSA
+KAMPALA SITI CABLE LIMITED
+Hello IT
+Refinitiv US LLC
+JSC Liberty Bank
+Unified National Networks
+USDA
+Oceaneering International, Inc.
+Babakaya Networking Services Company
+PT Yetoya Solusi Indonesia
+COMCAST-SRL
+TNext S.A.
+Sunrise Communications AG
+Telenor Satellite AS
+BRISK SYSTEMS
+Speednet Provedor de Acesso a Internet Ltda
+3S INF
+Nine Internet Solutions AG
+Homaye Jahan Nama Co. ( Private Joint Stock)
+Zanzibar Information Communication Technology Infrastructure Agency (ZICTIA)
+ORANGE MOLDOVA S.A.
+Supernet, PDS Limited
+AERO COMMUNICATIONS BROADBAND PVT. LTD
+Veganet Teknolojileri ve Hizmetleri LTD STI
+Polkomtel Sp. z o.o.
+XFone 018 Ltd
+Ecuadortelecom S.A.
+Total Access Communication PLC.
+Aureon Network Services
+Tera Fiber Telecomunicações Ltda
+Myanmar Unilink Communication Company Limited
+JSC Avantel
+Laxo Global Akses, PT
+The Rye Telephone Company
+GK Network
+LINK PRIME TECNOLOGIA
+Arris Group, Inc
+Bredbandig IT Communication i Goteborg AB
+@del-141917
+Universitas Mataram
+MYNET S.R.L.
+Nova Technology Development (Hong Kong) Limited
+PT Jembatan Data Pangrango
+WWZ Telekom AG
+Ensite Brasil Telecomunicações Ltda - ME
+Barbosa & Costa Ltda
+GIB-Solutions AG
+IV INFORMATICA LTDA -ME
+Telebec
+Tennessee Valley Authority
+Web Concepts (Pvt) Ltd
+Global Transit Communications
+Super Sonic Broadband Pvt Ltd
+UAB "Magnetukas"
+Dade Pardazi Respina PJSC
+HUGHES DE COLOMBIA S.A.S.
+FLEX GESTAO DE RELACIONAMENTOS S.A.
+CLOUD VALLEY TECHNOLOGY LIMITED
+Comeser S.r.l.
+Hi3G Access AB
+V.B. Telecomunicações LTDA.
+SoftLayer Technologies Inc.
+Silver Lake Investments (Silver Cable)
+Government Communications Network
+University of Texas Medical Branch
+Giuliano Claudio Peritore trading as "Panservice s.a.s. di Cuseo Fabrizio & C."
+MYREPUBLIC PTY LTD
+North State Telephone Co.
+Iway AG
+Digital Technology Co.Ltd.
+SGV TI E TELECOM LTDA
+London Grid for Learning Trust
+CV. NATANETWORK SOLUTION
+Kujtesa Net Sh.p.k.
+PT. Trans Indonesia Superkoridor
+Druzstvo EUROSIGNAL
+St. Lucie County - Automated Services
+AT&T Data Communications Services
+Gestora de Infraestructuras de Telecomunicaciones de Guinea Ecuatorial
+Grupo Bimbo, S.A.B. de C.V.
+Clean Net Telecom Ltda
+Axesat México, S. A. de C.V.
+Haifa Chemicals Ltd
+TELE ALHAMA S.L
+Cloud Teknologi Nusantara .CV
+Virgo Communication Ltd
+CNET Provedor de Internet Ltda ME
+NetCom BW GmbH
+Planet Cable, Inc.
+UNIDATA S.p.A.
+LLC Sweet Life Plus
+PHOENIX CHILDREN'S HOSPITAL
+Orange Tunisie
+MSW S.A.
+GTS Telecom SRL
+INTERNET TELECOMUNICATION COMPANY DE GUATEMALA S.A. , SUCURSAL EL SALVADOR
+INSTITUT AGAMA ISLAM NEGERI (IAIN) PONOROGO
+Pfizer Manufacturing Deutschland GmbH
+Secretaria de Estado de Desenvolvimento e Inovacao
+Big Bend Telephone Company, Inc.
+Jakub Skorek trading as MCG
+PT JARGARIA TELEMATIKA INDONESIA
+F A VIEIRA DE SOUZA SERVICOS ME
+Dinas Komunikasi dan Informatika Kabupaten Karanganyar
+Paintweb Internet Ltda
+Eyes Nwhere Sistemas Inteligentes de Imagem Ltda
+Roll Global LLC
+Accenture UK Limited
+Shivansh Infotech pvt Ltd
+Pan M Tech Limited
+Allied Telecom Group, LLC
+Satelcom Internet Inc.
+Peter Rauter GmbH
+Major League Baseball Advanced Media, LP
+Exord Online Ltd
+AS Number of Indusind Media and communication Ltd.
+Murmansk Multiservice Networks-ShPD LLC
+iboss,inc
+SM Passos Kayser Sistemas de Comunicações ME
+Texas A&M University
+CONTENT DELIVERY NETWORK LTD
+TV Rey de Occidente, S.A. de C.V.
+Solcon Internetdiensten B.V.
+PT SARANA INTI MAKMUR BERSAMA
+Nova Rede de Telecomunicações Ltda
+Banco Santander (Brasil) S.A.
+INOC, LLC
+Capitalonline Data Service Co.,LTD
+SPEED ONLINE
+Computer Complex Network
+CHINATELECOM Jiangsu Suqian IDC network
+BrianTel SRL
+Viettel Corporation
+MEDIA COMMERCE PERÚ S.A.C
+Brantley Telephone Company, Inc.
+Loginet Solutions LLC
+ALLTEC INTERNET
+Colombia Móvil
+PT Artha Media Lintas Nusa
+Huawei do Brasil Telecomunicações Ltda.
+Neology (Pty) Ltd
+Spider Net Ltd
+Digital Telco s.r.l.
+Euskaltel S.A.
+Wind Telecomunicação do Brasil Ltda - ME
+Spectra Energy Corporation
+M2E PREST DE SERV ESPECIALIZADOS EM INF LTDA - EPP
+Southern Telecommunication Company Ltd.
+Grape S.A.
+ShenZhen Topway Video Communication Co. Ltd
+Primetel PLC
+GENOVESIO HUGO ALBERTO RAMON
+Media Antar Nusa PT.
+Beijing HuaxiaYakue Network Technology Co., Ltd.
+City of Morganton
+Ani Broadband Service Pvt Ltd
+ICT BULUT BILISIM A.S.
+INTERCONECT TELEINFORMATICA EIRELI
+Pfizer Pte Ltd
+JON.CZ s.r.o.
+Point Broadband Fiber Holding, LLC
+Noakhali Broadband Network
+Geotel Bangladesh IT Ltd.
+PT Arkananta Global Media
+Netskope Inc
+TWO SIGMA INVESTMENTS, LP
+PT Cloud Hosting Indonesia
+Wyris Network Pvt Ltd
+Multinet Broadband
+NORTH TELECOMUNICACOES EIRELI
+PT.Bestcamp Prima Data
+PT Anugerah Cimanuk Raya
+SITI NETWORKS LIMITED
+Dehradun Enet Solutions Private Ltd
+PT RESTU PANCA ALAM
+Live Nation Entertainment, Inc.
+Fibre Stream PTY Ltd
+P4 TELECOM LTDA
+Roularta Media Group
+Ownit Broadband AB
+PT DES Teknologi Informasi
+Vodafone Limited
+Metlife Chile Seguros de Vida
+Dijlat Al-Khair for communications and internet Ltd
+Metrotel SA ESP
+Netfar Informatica Ltda
+SARTOR INTERNET LTDA - ME
+Jordan Data Communications Company LLC
+Switch Telecom s.a.r.l
+Kerala Vision Broad Band Private Limited
+STATUS EQUIPAMENTOS DE TELECOMUNICACOES
+Over the Wire Pty Ltd
+ZUM TELECOM LTDA- ME
+PT. ARTHA LINTAS DATA MANDIRI
+PT Bantani Media Utama
+BANCO VOTORANTIM S/A
+MHO Networks
+Cell C (Pty) Ltd
+Optix Pakistan (Pvt.) Limited
+Angkor Data Communication
+Unifique Telecomunicações SA
+Netonline Bilisim Sirketi LTD
+Tucuman BBS S.R.L.
+Cdiscount SA
+Mega-Line Ltd.
+RD TORRESNET TELECOM LTDA
+Sdh Network Pvt Ltd
+ultraWIFI Telecom Ltda
+Superhub Ltd.
+RSO APOLO HIDALGO S.R.L.
+ALTAN REDES, S.A.P.I. de C. V.
+Telstra International Limited
+Wifirst S.A.S.
+TELECOMUNICACIONES BANTEL, C.A.
+IVANCELL. NET COMERCIO DE TELEFONIA EIRELI
+Start Communications
+IPVG
+ALOO TELECOM - FSF TECNOLOGIA SA
+Activline Telecom Pvt. Ltd.
+Ferabraznet Comenrcio e Serv. de Telecom. Ltda-ME
+Miguel Amado Escobar
+PRIME BANK LIMITED
+LLC Babilon-T
+PT Multidata Rancana Prima
+ISP Alliance a.s.
+BITAL INTERNET
+CETIN a.s.
+Bulsatcom EAD
+Sunwire Inc.
+Gandalf Comunicaciones C.A.
+Tatanet Services Limited
+Crossnet LLC
+Telia Norge AS
+Teleservice Bredband Skane AB
+Titania Telecom
+Giggle Fiber
+PRZEDSIEBIORSTWO HANDLOWOPRODUKCYJNOUSLUGOWE "ARONET" ANDRZEJ OLSZEWSKI
+NODE1 Pty Ltd
+LT2 TELECOMUNICACOES LTDA - EPP
+RD TELECOM LTDA -ME
+Cooperativa de Electrificación Rural de San Carlos R.L. (Coopelesca R.L.)
+bdHUB
+Dhamrai Network
+AIRPOINT TELECOMUNICACIONES LIMITADA
+Schuberg Philis B.V.
+Seans Media Pvt Ltd
+Health Insurance Review Assessment Service
+Blinkload Technology Co., Ltd
+Enreach Netherlands B.V.
+Golden Belt Telephone
+Safe Hosts Internet LLP
+Pishgaman Toseeh Ertebatat Company (Private Joint Stock)
+Bangalore Broadband Network Pvt Ltd
+Piranha Systems
+RigNet Inc
+Shared Services Canada
+SAP America Inc.
+KOMUNIKA LIMA DUABELAS, PT
+STACKBIT INTERNET SERVICES PRIVATE LIMITED
+Wireline Solution India Pvt Ltd.
+Xplore Cyber & Net
+FiberNet Communications L.C.
+BBN Technologies Corp.
+TECNET ARGENTINA S.A.
+Nette sp. z o.o.
+Sol Cablevisión S.A.S E.S.P
+South Slope Cooperative Telephone Company
+Opticom Networks Private Limited
+CHIRCALNET TELECOM, C.A.
+Hai Telecommunications Limited
+Lanet Network Ltd
+Society of Mali's Telecommunications (SOTELMA)
+VIVO CONNECTION spol. s r.o.
+DIGISOFT
+Global Ra Net Services Pvt. Ltd.
+Smart Axiata Co., Ltd.
+Servicios para el Transporte de Información S.A.
+The Bank of New York Mellon Corporation
+S A Internet Solution Pvt Ltd
+First Advantage Corporation
+IE Parhomenko Aleksey Aleksandrovich
+Telemasters
+Tomasz Gruca
+HERMOM SERVICOS E COMERCIO DE TELECOMUNICACOES LTD
+CSC - Tieteen tietotekniikan keskus Oy
+Pars Fonoun Ofogh Information Technology and Communications Company LTD
+PAREXEL International GmbH
+Global Resource Systems, LLC
+IGNET LINHAS TELECOMUNICAÇÕES - ME
+KSC Commercial Internet Co.Ltd.
+PJSC Moscow city telephone network
+GRUPO ZGH SPA
+Kalibo Cable Television Network Inc
+Moja Supernova Doo Beograd
+LANCOM LTD
+Amobia Communications
+VICENTE CLAUDIO ORLANDO
+UNIVERSIDAD LATINOAMERICANA, S.C.
+Molina Healthcare Inc.
+Edge Broadband
+STATURE (PTY) LTD
+WORLD CONNECT TELECOMUNICAÇÕES DO BRASIL EIRELI-ME
+NetLink América C.A.
+Jupiter Telecomunicacoes e Informatica Ltda
+CONNECT MAX TELECOM LTDA
+VC Telecoms Sdn. Bhd.
+Dinas Komunikasi dan Informatika Pemerintah Kabupaten Cilacap
+FIBER WEB SERVICES LTDA
+Ascenty Data Centers e Telecomunicações S/A
+INVERSIONES RDN3 C.A.
+Allegis Group
+BRISANET SERVICOS DE TELECOMUNICACOES LTDA
+GlobalConnect A/S
+Vodafone Czech Republic a.s.
+KAYANAT TECHNOLOGY INTERNET SERVICES CO
+Silica Networks Argentina S.A.
+ETH ENTERPRISE TECNOLOGIA LTDA
+PERSONA COMMUNICATIONS INC.
+Forbtech
+PT. LISAR INTERNATIONAL NETWORKING
+Sign In (PVT) LTD
+Highland Wireless & IT Solutions Ltd
+LandTech Sp. z.o.o.
+Ivy Comptech Pvt Ltd
+Rede Connect Telecom
+XF Comunicaciones S.A.
+REDE RALPNET TELECOMUNICACOES EIRELI
+ChoicePoint, Inc.
+WiCAM Corporation Ltd.
+Nextlink Broadband
+S.O.S. TELECOM EIRELI ME
+UP NET TELECOM
+Dhaka Information Technology
+RTC Communications Corp.
+IT7 Networks Inc
+Cooperativa de Servicios Públicos de Porteña LTDA
+Ertebatat Sabet Parsian Co. PJS
+OKB PROGRESS LLC
+Andhra Pradesh State FiberNet Limited
+Internet Rimon LTD
+BeotelNet-ISP d.o.o
+Linkt SAS
+MVM PINTO COMERCIO E SERVICOS ME
+VoiceHost Ltd
+Telefónica Celular S.A
+NETBITS TECNOLOGIA E COMERCIO LTDA
+PT. ADEAKSA INDO JAYATAMA
+Center Prestadora Serviços S/C Ltda
+Telone PVT Ltd
+HOR.NET Polska Sp.z o.o.
+Weatherford International Inc.
+Jenny Internet cc
+Horizon Scope Mobile Telecom WLL
+Boom Info Tech (SMC-Pvt) Ltd
+Origin Energy Retail Limited
+WiscNet
+Digicel (Panama), S.A
+Crystall Ltd.
+Southern New England Telephone Company and SNET America, Inc.
+Zenlayer Inc
+Reliance Industries Limited
+Grupo Fullsat SRL
+Zolotaya Linia Ltd.
+kabelplus GmbH
+MORENO PABLO DANIEL (SOLNET ISP)
+>>>>>>> Stashed changes
