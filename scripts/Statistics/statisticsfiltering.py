@@ -6,6 +6,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 import os
+
+def reading_prefix_data():
+
+
 def reading_data():
     rows = []
     for month in ['01','03','04','05','06']:
@@ -463,9 +467,10 @@ if __name__ == "__main__":
     ns = [2]
     df = reading_data()
     # computing_empirical_frequencies(df,0,0)
-    generating_stats(df,ms,ns)
+    # generating_stats(df,ms,ns)
     # dg= pd.read_csv('log/debuging_sources.csv', index_col = 0)
     # dl = pd.read_csv('log/debugging_traceroutes.csv', index_col=0)
     # dh = pd.read_csv('log/debugging_sources_traceroutes.csv', index_col = 0)
     # visualisation(dg=dg,dl=dl,dh=dh)
     # counting_number_of_24s(df)
+    print(df.columns)

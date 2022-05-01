@@ -455,7 +455,7 @@ if __name__ == '__main__':
     # print(df['squat_rir'].count_values())
     print(len(list(set(df['squat_org'].unique()).union(set(df['squat_rir'].unique())))))
     print(len(set(df['squat_org'].unique()).union(set(df['squat_rir'].unique()))))
-    with open("../../result/org_observed_ripe.txt", 'w+') as file:
+    with open("../../result/org_observed_everyone.txt", 'w+') as file:
         for row in list(set(df['squat_org'].unique()).union(set(df['squat_rir'].unique()))):
                 file.write(row + '\n')
     # dict_count = {}
@@ -606,7 +606,7 @@ if __name__ == '__main__':
     import seaborn as sns
     df_metainfos['Eyeballs'] = df_metainfos['Eyeballs'].astype(float)
     df_metainfos['Rank'] = df_metainfos['Rank'].astype(float)
-    df_metainfos.to_csv('../../results/squatters_metainfo.csv')
+    df_metainfos.to_csv('../../result/squatters_metainfo.csv')
 #     corr = df_metainfos.corr()
 #     print(corr)
 #     model2 = ols("Count ~ Eyeballs+CustomerCones", data=df_metainfos).fit()

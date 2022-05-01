@@ -43,17 +43,9 @@ adding_as_org_level_information(df)
 df = df[df['Median Ratio']<100]
 prefixes_to_keep = []
 
-# for pref in df['Source Prefix']:
-#     if pref.split('-')[1].split('.')[-1] != '0':
-#         prefixes_to_keep.append(True)
-#     else:
-#         prefixes_to_keep.append(False)
-# df['SingleIP'] = prefixes_to_keep
-# df = df[df['SingleIP']]
-
 # print(df_connected_components)
 #'# of Nodes when Restricted','# of Edges when Restricted',
-df_features = df[['# of Connected Components','Tree Depth','Number of Sinks','Max Distance to the CGNAT candidate','# of Edges','Median RTT','25 RTT','75 RTT','Median hop','25 hop', '75 hop','Number of Prefixes',]]
+df_features = df[['# of Connected Components','Tree Depth','Number of Sinks','Max Distance to the CGNAT candidate','# of Edges','Median hop','25 hop', '75 hop','Number of Prefixes','Median RTT','25 RTT','75 RTT']]
 df_rtt = df[['Median RTT','25 RTT','75 RTT','Median hop','25 hop', '75 hop']]
 print(df.shape)
 
@@ -111,11 +103,11 @@ centroids  = kmeans.cluster_centers_
 # centroid_labels = [centroids[i] for i in kmeans.labels_]
 # print(centroid_labels)
 for i,elem in enumerate(centroids):
-    print(i,dict(zip(['# of Connected Components','Tree Depth','Number of Sinks','Max Distance to the CGNAT candidate','# of Edges','Median RTT','25 RTT','75 RTT','Median hop','25 hop', '75 hop','Number of Prefixes',],elem)))
+    print(i,dict(zip(['# of Connected Components','Tree Depth','Number of Sinks','Max Distance to the CGNAT candidate','# of Edges','Median hop','25 hop', '75 hop','Number of Prefixes',],elem[0:-3])))
     # print(elem[[0,2,-6,-5]])
 list_of_cgnat_addresses = {}
 # updated_label = {0:'Large CGNAT',1:'Small CPE',2:'Small CPE',3:'Medium CGNAT',4:'Large CPE',5:'Large CGNAT',6:'Large CGNAT',7:'Large CPE',8:'Large CGNAT'}
-updated_label = {0:'Small NAT444',1:'Small NAT44',2:'Unknown',3:'Large NAT44',4:'Unknown',5:'Large NAT444',6:'Large NAT44',7:'Large NAT44',8:'Large NAT444'}
+updated_label = {0:'Small NAT444',1:'Small NAT44',2:'Unknown',3:'Large NAT44',4:'Large NAT',5:'Large NAT444',6:'Large NAT44',7:'Large NAT44',8:'Large NAT444'}
 
 label = []
 for i in kmeans.labels_:

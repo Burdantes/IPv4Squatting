@@ -25,7 +25,7 @@ for country in pycountry.countries:
     countries[country.alpha_2] = country.alpha_3
 #color ramp for chloropleth map
 scl = [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'], [0.6, 'rgb(158,154,200)'],[0.8, 'rgb(117,107,177)'],[1.0, 'rgb(84,39,143)']]
-top_countries = pd.read_csv('../../results/Dod_squatters_June_filters.csv',index_col = 0)
+top_countries = pd.read_csv('../../result/squatters_metainfo.csv',index_col = 0)
 print(top_countries)
 top_countrie = top_countries['Country'].value_counts()
 print(top_countries)
@@ -85,4 +85,4 @@ fig.update_layout(
         # color="RebeccaPurple"
     )
 )
-fig.write_image("figures/fig_map+heatmap_postfilter.png",width=1980, height=1080)
+fig.write_image("../../result/fig_map+heatmap.png",width=1980, height=1080)

@@ -226,7 +226,7 @@ def proportion_of_squatting(final_value):
     'CDN ~ No Measurement', 'Access ~ No Measurement','Transit ~ No Measurement','Unknown ~ No Measurement',
                        ), ncol=3, loc='upper left',
                bbox_to_anchor=(0, 1.0, 0, 0.21), fontsize='x-large')
-    plt.savefig('figures/Representativity_allocated_with_threshold.pdf', bbox_inches="tight")
+    plt.savefig('figures/Representativity_allocated_with_threshold.png', bbox_inches="tight")
     # plt.show()
 
 if __name__ == "__main__":

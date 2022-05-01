@@ -20,7 +20,7 @@ for month in ['05','03']:
                 if line.startswith('#') or 'trace_id' in line:
                     continue
                 row = line.split('|')
-                row_prefix = row[2].split('.')[0] + '.0.0.0/8'
+                row_prefix = row[-2]
                 if row_prefix in restricted_prefixes_cgnat:
                     counting_cgnat += 1
                 if row_prefix in restricted_prefixes_nat:
