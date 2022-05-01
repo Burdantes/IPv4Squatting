@@ -31,30 +31,30 @@ Install these dependencies if configure script complains
 sudo apt install libbz2-dev zlib1g-dev
 ```
 
-3. py-radix package
+3. scamper. Follow instructions on https://www.caida.org/catalog/software/scamper/
+
+4. py-radix package
 ```
 $ pip install py-radix
 ```
-4. aggregate-prefixes
+5. aggregate-prefixes
 ```
 $ pip install aggregate-prefixes
 ```
-5. Copy the traceroute_table.py script to ```~/.config/ripe-atlas-tools/renderers``` so that RIPE Atlas tools can use it to format traceroute results in a delimited format for easier processing.
+6. Copy the traceroute_table.py script to ```~/.config/ripe-atlas-tools/renderers``` so that RIPE Atlas tools can use it to format traceroute results in a delimited format for easier processing.
 
 ## Step 1 : Data Collection and Processing
 
 ### Find Unannounced IPv4 Space
 
-Begin BGP data collection with the `collection_bgp_dumps.sh` script which downloads 1 weekday snapshot per RIPE RIS collector per week into the directory which it is run. Each generated file contains a prefix-asn mapping.
+To get unannounced prefixes for each month between `$start_month` and `$end_month` in '$year', run the following
+```
+./scripts/collect_bgp_dumps_2021.sh $start_month $end_month $year
+```
+The list of unannounced prefixes for `$month` is stored in `./data/unannounced-2021$month.txt`
 
-Run the following command to output all distrinct prefixes that have ASN mappings
-```
-gunzip -kc *.gz | LC_ALL=C sort -k1V,1V -k2n,2n | uniq > prefix-asn-YYYYMM.txt
-```
-and then
-```
-./unannounced.py prefix-asn-YYYYMM.txt > unannounced-YYYYMM.txt
-```
+
+For example, `./scripts/collect_bgp_dumps_2021.sh 9 10` will generate two files `unannounced-202109.txt` and `unannounced-202110.txt` in `./data/`
 
 ### Traceroutes (fetching from RIPE's server)
 
@@ -242,33 +242,33 @@ Suppose the traceroutes with squat addresses are in file `$squatspace_full` and 
 
 For Ark data run 
 ```
-cat $squatspace_full | python3 ./scripts/tr_pathfix.py -ark > $squatspace_path
+cat $squatspace_full | python3 ./scripts/Attribution/tr_pathfix.py -ark > $squatspace_path
 ```
 
 For Microsoft data run
 ```
-cat $squatspace_full | python3 ./scripts/tr_pathfix.py -msft > $squatspace_path
+cat $squatspace_full | python3 ./scripts/Attribution/tr_pathfix.py -msft > $squatspace_path
 ``` 
 
 For RIPE data run
 ```
-cat $squatspace_full | python3 ./scripts/tr_pathfix.py > $squatspace_path
+cat $squatspace_full | python3 ./scripts/Attribution/tr_pathfix.py > $squatspace_path
 ```
 
 For example, to apply to the parsed Ark traceroute stored in `temp/ams-nl.20200402.1585792800.warts.gz.parsed.squat.full.txt` (see previous section how to parse Ark), we can run
 ```
 squatspace_full=temp/ams-nl.20200402.1585792800.warts.gz.parsed.squat.full.txt
 squatspace_path=temp/ams-nl.20200402.1585792800.warts.gz.parsed.squat.path.txt
-cat $squatspace_full | python3 ./scripts/tr_pathfix.py -ark > $squatspace_path
+cat $squatspace_full | python3 ./scripts/Attribution/tr_pathfix.py -ark > $squatspace_path
 ```
 
 ### Get squatter attribution
 Follow these steps to get attribution results
-1. Use the desired unannounced IPv4 space. You may want to use the unannounced space for a specific month, to do this, open `scripts/util.py`, modify the `default_file` vairable in function `load_squatspace_default` to be the file name containing the unannounced squat prefixes that you want to use (see previous section for how to generate unannounced squat prefixes). For example, the default file in the code is `data/unannounced-202107.txt`
+1. Use the desired unannounced IPv4 space. You may want to use the unannounced space for a specific month, to do this, open `scripts/Attribution/util.py`, modify the `default_file` vairable in function `load_squatspace_default` to be the file name containing the unannounced squat prefixes that you want to use (see previous section for how to generate unannounced squat prefixes). For example, the default file in the code is `data/unannounced-202107.txt`
 
 2. Suppose the traceroutes with hop-AS mapping is in file `$squatspace_path` and result goes to `$squatspace_result`, then run 
 ```
-cat $squatspace_path | python3 analyze.py > $squatspace_result
+cat $squatspace_path | python3 ./scripts/Attribution/analyze.py > $squatspace_result
 ```
 
 The attribution runs two passes, the second pass attempts to attribute the unattributable traceroutes in the initial pass by some additional heuristics and has less confidence. The results from two passes are separated by
@@ -314,6 +314,12 @@ python3 kmeanNAT444.py
 ```
 
 ### Routers and middleboxes 
+To identify router and middlebox squat address configuration, use `./scripts/router_config.py`. The input to the script is the file `$squatspace_path` containing the mapping between hops and ASes (the output of `./scripts/tr_pathfix.py`). The script usage is
+```
+python3 ./scripts/router_config.py $squatspace_path
+```
+
+The output of the scripts consists of traceroutes that are identified with squat addresses deployed on routers, and at the end of each line a classification is given (`internal_router`, `border_router` or `unmapped_router`)
 
 #### 
 
