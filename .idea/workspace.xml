@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec27bf97-823a-4355-91b4-c4e25c390b23" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/Attribution/investigating_customer_prefixes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/UsageDetection/validating_cgnat_usage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/labels_prefixes_nat444.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/labels_prefixes_nat444.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Statistics/Parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Statistics/Parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Statistics/analyzingclients.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Statistics/analyzingclients.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Statistics/figures/Representativity_allocated_with_threshold.png" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Statistics/figures/Representativity_allocated_with_threshold.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Statistics/statisticsfiltering.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Statistics/statisticsfiltering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Statistics/worldheatmap.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Statistics/worldheatmap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/UsageDetection/counting_traceroutes.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/UsageDetection/counting_traceroutes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/UsageDetection/figures/validation_of_nat444_infer.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/UsageDetection/figures/validation_of_nat444_infer.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/UsageDetection/kmeanNAT444.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/UsageDetection/kmeanNAT444.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/UsageDetection/org_squat_usage.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/UsageDetection/org_squat_usage.py" afterDir="false" />
-    </list>
+    <list default="true" id="ec27bf97-823a-4355-91b4-c4e25c390b23" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,7 +202,7 @@
       <workItem from="1650560289067" duration="3239000" />
       <workItem from="1650814011246" duration="600000" />
       <workItem from="1650998630022" duration="460000" />
-      <workItem from="1651064681728" duration="3928000" />
+      <workItem from="1651064681728" duration="4228000" />
     </task>
     <task id="LOCAL-00001" summary="Updated slightly the scripts">
       <created>1651438552826</created>
@@ -225,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651438552827</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated slightly the scripts">
+      <created>1651438854495</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651438854495</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +229,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="loqman_upd" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
